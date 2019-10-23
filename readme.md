@@ -59,7 +59,6 @@ webpack
 * `webpack/webpack.prod.js` config webpack for production environment.
 * `/webpack.config.js` main webpack config that merge common and webpack environment based config.
 * Enzyme config `/setupTest.js` here you will have all setup for enzyme to test your component.
-* Prettier config `/.prettierc`.
 * Browsers list config `/.browserslistrc`.
 
 
@@ -73,7 +72,6 @@ webpack
 * [Jest](https://github.com/facebook/jest) [ Unit test]
 * [Enzyme](http://airbnb.io/enzyme/) for UI testing.
 * [Eslint](https://github.com/eslint/eslint/) with airbnb config
-* [Prettier](https://github.com/prettier/prettier) [ Code formatter ]
 * [Style](https://github.com/webpack-contrib/style-loader) & [CSS Loader](https://github.com/webpack-contrib/css-loader) & [SASS-loader](https://github.com/webpack-contrib/sass-loader)
 * [CSS modules](https://github.com/css-modules/css-modules) [ Isolated style based on each component ]
 * [Browsers list](https://github.com/browserslist/browserslist) [ Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env ]

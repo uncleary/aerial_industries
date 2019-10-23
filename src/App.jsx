@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Home from './components/home';
-import Header from './components/header/header';
-// import Footer from "./components/footer";
+import './styles/main.scss';
 
-const home = () => <Home title="Hello from React webpack" />;
+import MyNavbar from './components/navbar';
+import Home from './pages/home';
+import Farmer from './pages/farmer';
+import LandingPage from './pages/landingPage';
 
 class App extends Component {
   constructor(props) {
@@ -17,12 +18,12 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Header />
-          <hr />
+          <MyNavbar />
           <Switch>
-            <Route exact path="/" component={home} />
-            {/* <Route path="/users" component={Users} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/" component={Home} />
+            <Route path="/welcome" component={LandingPage} />
+            <Route path="/farmer" component={Farmer} />
+            {/* <Route path="/contact" component={Contact} />
             <Route component={Notfound} /> */}
           </Switch>
           {/* <Footer /> */}
