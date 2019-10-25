@@ -14,7 +14,7 @@ input {
   @include heading-font;
 }
 
-.btn {
+button {
   background-color: $orange;
   border-color: $orange;
   @include heading-font;

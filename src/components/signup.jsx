@@ -18,7 +18,7 @@ const EmailSignUp = (props) => {
       </FormGroup>
       <FormGroup check row>
         <Col sm={{ size: 10, offset: 2 }}>
-          <Button>Submit</Button>
+          <Button color="secondary" size="lg">Submit</Button>
         </Col>
       </FormGroup>
     </Form>
