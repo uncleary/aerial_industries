@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import '../styles/config.scss';
 
 import {
@@ -37,7 +37,7 @@ const MasterHeadH1 = styled.h1`
 const SectionH1 = styled.h1`
   margin-top: 4rem;
   margin-botton: 1rem;
-  text-align: ${props => (props.left ? 'left' : 'center')};
+  text-align: ${(props) => (props.left ? 'left' : 'center')};
   font-size: 3rem;
   font-weight: bold;
 `;
@@ -45,7 +45,7 @@ const SectionH1 = styled.h1`
 const SectionH2 = styled.h2`
   margin-top: 1rem;
   margin-bottom: 2rem;
-  text-align: ${props => (props.left ? 'left' : 'center')};
+  text-align: ${(props) => (props.left ? 'left' : 'center')};
   font-size: 1.7rem;
   line-height: 1.5;
 `;
@@ -64,8 +64,7 @@ const CoCard = ({ subtitle }) => (
       top
       width="100%"
       src="https://cdn5.vectorstock.com/i/1000x1000/76/54/avatar-male-farmer-icon-flat-style-vector-11427654.jpg"
-      alt="Card image cap"
-    />
+      alt="Card image cap" />
     <CardBody>
       <CardTitle
         style={{
@@ -73,8 +72,7 @@ const CoCard = ({ subtitle }) => (
           width: '90%',
           margin: 'auto',
           minHeight: '100px',
-        }}
-      >
+        }}>
         {subtitle}
       </CardTitle>
       <Button>See More</Button>
@@ -87,19 +85,20 @@ const CoCard = ({ subtitle }) => (
   </Card>
 );
 
-const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop); // General scroll to element function
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+// General scroll to element function
 
-const ScrollDemo = () => {
-  const myRef = useRef(null);
-  const executeScroll = () => scrollToRef(myRef);
+// const ScrollDemo = () => {
+//   const myRef = useRef(null);
+//   const executeScroll = () => scrollToRef(myRef);
 
-  return (
-    <>
-      <div ref={myRef}>I wanna be seen</div>
-      <button onClick={executeScroll}> Click to scroll </button>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <div ref={myRef}>I wanna be seen</div>
+//       <button onClick={executeScroll}> Click to scroll </button>
+//     </>
+//   );
+// };
 
 export default function LandingPage() {
   return (
@@ -202,7 +201,7 @@ export default function LandingPage() {
               </p>
             </Col>
           </Row>
-          <Row></Row>
+          <Row />
         </Container>
       </GraySection>
 

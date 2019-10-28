@@ -27,7 +27,7 @@ export default function MyNavbar() {
             <NavLink href="/supplier">Supplier</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/farmer">Farmer</NavLink>
+            <NavLink href="/farmers">Farmers</NavLink>
           </NavItem>
           <Button>
             Sign Up

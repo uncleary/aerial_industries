@@ -6,7 +6,7 @@ import './styles/main.scss';
 import MyNavbar from './components/navbar';
 import MyFooter from './components/footer';
 import Home from './pages/home';
-import Farmer from './pages/farmer';
+import Farmers from './pages/farmers';
 import LandingPage from './pages/landingPage';
 import Investment from './pages/investment';
 
@@ -24,7 +24,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/welcome" component={LandingPage} />
-            <Route path="/farmer" component={Farmer} />
+            <Route path="/farmers" component={Farmers} />
             <Route path="/investment" component={Investment} />
             {/* <Route path="/contact" component={Contact} />
             <Route component={Notfound} /> */}

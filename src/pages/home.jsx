@@ -12,20 +12,12 @@ import {
   CardTitle,
 } from 'reactstrap';
 
+import Title from '../components/title';
+
 const MasterHead = styled.section`
   position: relative;
   background-color: #e9ecef;
   padding: 6rem 4rem;
-`;
-
-const Title = styled.h1`
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: black;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 `;
 
 const Subtitle = styled.h2`

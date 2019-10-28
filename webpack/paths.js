@@ -5,7 +5,7 @@ module.exports = {
   outputPath: path.resolve(__dirname, '../', 'build'),
   entryPath: {
     app: path.resolve(__dirname, '../', 'src/index.jsx'),
-    farmer: path.resolve(__dirname, '../', 'src/pages/farmer.jsx'),
+    farmers: path.resolve(__dirname, '../', 'src/pages/farmers.jsx'),
     welcome: path.resolve(__dirname, '../', 'src/pages/landingPage.jsx'),
     investment: path.resolve(__dirname, '../', 'src/pages/investment.jsx'),
   },
