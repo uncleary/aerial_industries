@@ -4,6 +4,16 @@ This is a visual demo of the iPollen8 project built with React and static data.
 
 Used the [Webpack react minimal boilerplate](https://medium.com/@hashem.khalifa/minimal-webpack-and-react-starter-boilerplate-seriously-d90a673e134f)
 
+## To get started with the project
+
+In your terminal, run `npm install`
+
+then run
+
+`npm start`
+
+and start making changes!
+
 ### Additional Project Doc from boilerplate repo
 
 ![Real time change](https://cdn-images-1.medium.com/max/1600/1*0Slpwk3trmF7kLeoFp5UOw.gif)
