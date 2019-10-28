@@ -6,9 +6,9 @@ Used the [Webpack react minimal boilerplate](https://medium.com/@hashem.khalifa/
 
 ## To get started with the project
 
-In your terminal, run `npm install`
+After cloning this git repository, open your terminal, go into the folder and run `npm install` to install all dependencies.
 
-then run
+Then run
 
 `npm start`
 
