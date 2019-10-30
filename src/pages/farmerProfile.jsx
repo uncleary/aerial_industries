@@ -23,13 +23,13 @@ const FarmerProfile = (farmerParent) => {
   const img3Path = require('./../static/img/img3farmer' + thisId + '.jpg');
   
   return (
-    <Container>
+    <Container style={{ paddingTop: '5rem' }}>
       <StyledRow>
-        <Col md="2">
-          {/* <img
-            src={img1Path}
+        <Col md={{ size: 2, offset: 1 }}>
+          <img
+            src={farmerParent.farmer.imgLink}
             alt="Farmer Profile"
-            style={{ maxWidth: '200px' }} /> */}
+            style={{ maxWidth: '100%' }} />
         </Col>
         <Col md="auto">
           <h3 style={{ fontWeight: 'bold', fontSize: '2rem' }}>{farmerParent.farmer.farmerName + '\'s Farm' }</h3>

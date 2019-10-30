@@ -68,8 +68,8 @@ export default function Farmers() {
           </Col>
           <Col md="9">
             <Row>
-              {list.map((item, index) => (
-                <FarmerCard farmerData={item} key={index} />
+              {list.map((item) => (
+                <FarmerCard farmerData={item} />
               ))}
             </Row>
           </Col>

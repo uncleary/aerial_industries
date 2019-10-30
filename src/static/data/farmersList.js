@@ -1,7 +1,7 @@
 const farmersList = [
   {
     id: 1,
-    imgLink: '../static/img/farmer1.jpg',
+    imgLink: require('../img/farmer1.jpg'),
     farmerName: 'Musa Aliu',
     cropType: 'Maize',
     farmingStage: 'Pre-Emergence',
@@ -75,43 +75,63 @@ const farmersList = [
   },
   {
     id: 2,
-    imgLink: '../static/img/farmer2.jpg',
+    imgLink: require('../img/farmer2.jpg'),
     farmerName: 'Kunle Kabiru',
     cropType: 'Maize',
     farmingStage: 'Post-Emergence',
-    region: 'NorthEast',
+    location: {
+      region: 'NorthEast',
+      city: 'Ogoja',
+      coordinates: '6°39\'03"N 8°47\'49"E',
+    },
   },
   {
     id: 3,
-    imgLink: '../static/img/farmer3.jpg',
+    imgLink: require('../img/farmer3.jpg'),
     farmerName: 'Okechukwu Obi',
     cropType: 'Rice, Maize',
     farmingStage: 'Pre-Harvest',
-    region: 'SouthEast',
+    location: {
+      region: 'SouthEast',
+      city: 'Ogoja',
+      coordinates: '6°39\'03"N 8°47\'49"E',
+    },
   },
   {
     id: 4,
-    imgLink: '../static/img/farmer4.jpg',
+    imgLink: require('../img/farmer4.jpg'),
     farmerName: 'Banjo Jide',
     cropType: 'Maize',
     farmingStage: 'Pre-Harvest',
-    region: 'SouthWest',
+    location: {
+      region: 'SouthWest',
+      city: 'Ogoja',
+      coordinates: '6°39\'03"N 8°47\'49"E',
+    },
   },
   {
     id: 5,
-    imgLink: '../static/img/farmer5.jpg',
+    imgLink: require('../img/farmer5.jpg'),
     farmerName: 'John A',
     cropType: 'Rice',
     farmingStage: 'Pre-Emergence',
-    region: 'SouthEast',
+    location: {
+      region: 'SouthEast',
+      city: 'Ogoja',
+      coordinates: '6°39\'03"N 8°47\'49"E',
+    },
   },
   {
     id: 6,
-    imgLink: '../static/img/farmer6.jpg',
+    imgLink: require('../img/farmer6.jpg'),
     farmerName: 'Hamza Beko',
     cropType: 'Rice',
     farmingStage: 'Post-Emergence',
-    region: 'SouthWest',
+    location: {
+      region: 'SouthWest',
+      city: 'Ogoja',
+      coordinates: '6°39\'03"N 8°47\'49"E',
+    },
   },
 ];
 
