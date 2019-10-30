@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
@@ -6,8 +7,8 @@ import {
 
 const FilterBox = ({ filters }) => (
   <Form>
-    {filters.map((item) => (
-      <FormGroup check>
+    {filters.map((item, index) => (
+      <FormGroup check key={index}>
         <Label check style={{ marginBottom: '1rem' }}>
           <Input type="checkbox" />
           {' '}

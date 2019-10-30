@@ -9,6 +9,20 @@ import Home from './pages/home';
 import Farmers from './pages/farmers';
 import LandingPage from './pages/landingPage';
 import Investment from './pages/investment';
+import FarmerProfile from './pages/farmerProfile';
+import farmersList from './static/data/farmersList';
+
+const FirstFarmerProfile = () => <FarmerProfile farmer={farmersList[0]} />;
+
+const NoMatchPage = () => <h3>404 - Not found</h3>;
+
+const FarmerProfilePage = ({match, location}) => {
+  const { params: { userId } } = match;
+  console.log(userId)
+  return (
+    <FarmerProfile farmer={farmersList[userId - 1]} />
+  );
+}
 
 class App extends Component {
   constructor(props) {
@@ -26,8 +40,8 @@ class App extends Component {
             <Route path="/welcome" component={LandingPage} />
             <Route path="/farmers" component={Farmers} />
             <Route path="/investment" component={Investment} />
-            {/* <Route path="/contact" component={Contact} />
-            <Route component={Notfound} /> */}
+            <Route path="/farmer/:userId" component={FarmerProfilePage} />
+            <Route component={NoMatchPage} />
           </Switch>
           <MyFooter />
         </div>

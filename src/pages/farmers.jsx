@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -58,16 +59,17 @@ export default function Farmers() {
         </Row>
         <Row>
           <Col md="3">
-            {filterCategories.map((item) => (
+            {filterCategories.map((item, index) => (
               <SingleFilterBox
+                key={index}
                 filterName={item.filter}
                 filterArray={item.filterArray} />
             ))}
           </Col>
           <Col md="9">
             <Row>
-              {list.map((item) => (
-                <FarmerCard farmerData={item} />
+              {list.map((item, index) => (
+                <FarmerCard farmerData={item} key={index} />
               ))}
             </Row>
           </Col>

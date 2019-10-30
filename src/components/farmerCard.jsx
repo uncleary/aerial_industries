@@ -1,3 +1,5 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
@@ -10,8 +12,7 @@ const FarmerCard = ({ farmerData }) => (
       <CardImg
         top
         width="100%"
-        // eslint-disable-next-line import/no-dynamic-require
-        src={require("../static/img/" + farmerData.imgLink)}
+        src={require(farmerData.imgLink)}
         alt="Farmer Image" />
       <CardBody>
         <CardTitle
@@ -25,7 +26,7 @@ const FarmerCard = ({ farmerData }) => (
         <h4 style={{}}>{farmerData.cropType}</h4>
         <p>{farmerData.farmingStage}</p>
         <p>
-          <small className="text-muted">{farmerData.region}</small>
+          <small className="text-muted">{farmerData.location.region}</small>
         </p>
         <Button>See More</Button>
       </CardBody>
