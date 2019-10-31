@@ -8,12 +8,35 @@ import styled from 'styled-components';
 import '../styles/config.scss';
 import '../styles/timeline.css';
 
-import { Container, Row, Col } from 'reactstrap';
+import {
+  Container, Row, Col, Button,
+} from 'reactstrap';
 import Timeline from '../components/timeline';
+import LineGraph from '../components/lineGraph';
+import PieChart from '../components/pieChart';
+import FarmerDetailsTable from '../components/farmerDetailsTable';
 
 const StyledRow = styled(Row)`
   margin: 5rem 0rem;
 `;
+
+const ClickToInvestCard = () => (
+  <Row style={{ marginBottom: '5rem' }}>
+    <Col
+      md={{ size: 8, offset: 2 }}
+      style={{
+        textAlign: 'left',
+        backgroundColor: '#e9ecef',
+        margin: 'auto',
+        padding: '2rem',
+        borderRadius: '1rem',
+      }}>
+      <h2 style={{ fontWeight: 'bold' }}>Click to Invest!</h2>
+      <p>Click here for further technical details</p>
+      <Button>Invest</Button>
+    </Col>
+  </Row>
+);
 
 const FarmerProfile = (farmerParent) => {
   const thisId = farmerParent.farmer.id;
@@ -47,9 +70,11 @@ const FarmerProfile = (farmerParent) => {
           <img
             src={img2Path}
             alt="iPollen8"
-            style={{ maxWidth: '90%',
+            style={{
+              maxWidth: '90%',
               margin: 'auto',
-              display: 'block' }} />
+              display: 'block' 
+            }} />
         </Col>
         <Col md="6">
           <h4 style={{ color: '#495057' }}>{'Crop Type: ' + farmerParent.farmer.farmingStage}</h4>
@@ -71,12 +96,22 @@ const FarmerProfile = (farmerParent) => {
           <img
             src={img3Path}
             alt="iPollen8"
-            style={{ maxWidth: '90%',
+            style={{
+              maxWidth: '90%',
               margin: 'auto',
-              display: 'block' }} />
+              display: 'block',
+            }} />
         </Col>
         <Col md="6">
-          <h2 style={{ fontStyle: 'italic', fontSize: '3rem', color: 'red', paddingBottom: '1rem' }}>{farmerParent.farmer.details.section2.bigTitle}</h2>
+          <h2
+            style={{
+              fontStyle: 'italic',
+              fontSize: '3rem',
+              color: 'red',
+              paddingBottom: '1rem',
+            }}>
+            {farmerParent.farmer.details.section2.bigTitle}
+          </h2>
           <div>
             {farmerParent.farmer.details.section2.desc.map((item, index) => (
               <p key={index}>
@@ -101,6 +136,27 @@ const FarmerProfile = (farmerParent) => {
         <Col>
           <h2>Funding Details</h2>
           <Timeline timelineData={farmerParent.farmer.details.fundingDetails} />
+        </Col>
+      </StyledRow>
+      <ClickToInvestCard />
+      <StyledRow>
+        <Col md="6" style={{ padding: '2rem' }}>
+          <h2 style={{ marginBottom: '2rem' }}>Soil Geology</h2>
+          <PieChart />
+        </Col>
+        <Col md="6">
+          <FarmerDetailsTable
+            farmerName={farmerParent.farmer.farmerName}
+            coord={farmerParent.farmer.location.coordinates}
+            details={farmerParent.farmer.details} />
+          <h4>Summary</h4>
+          <p>{farmerParent.farmer.details.summary}</p>
+        </Col>
+      </StyledRow>
+      <StyledRow>
+        <Col md='auto'>
+          <h2>Precipitation</h2>
+          <div style={{ margin: 'auto' }}><LineGraph /></div>
         </Col>
       </StyledRow>
     </Container>
