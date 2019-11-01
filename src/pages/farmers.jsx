@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import '../styles/config.scss';
 import { Container, Row, Col } from 'reactstrap';
-import farmersList from '../static/data/farmersList';
+import farmersList from '../assets/data/farmersList';
 import FarmerCard from '../components/farmerCard';
 import Title from '../components/title';
 import FilterBox from '../components/filterBox';

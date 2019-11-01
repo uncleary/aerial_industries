@@ -16,6 +16,7 @@ export default function MyNavbar() {
 
   return (
     <Navbar color="light" light expand="md">
+      <NavbarBrand className='mr-3' href="/">Home</NavbarBrand>
       <NavbarBrand href="/welcome">iPollen8</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>

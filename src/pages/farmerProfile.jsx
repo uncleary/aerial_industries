@@ -42,8 +42,8 @@ const FarmerProfile = (farmerParent) => {
   const thisId = farmerParent.farmer.id;
 
   // const img1Path = require('' + farmerParent.farmer.imgLink);
-  const img2Path = require('./../static/img/img2farmer' + thisId + '.jpg');
-  const img3Path = require('./../static/img/img3farmer' + thisId + '.jpg');
+  const img2Path = require('../assets/img/img2farmer' + thisId + '.jpg');
+  const img3Path = require('../assets/img/img3farmer' + thisId + '.jpg');
   
   return (
     <Container style={{ paddingTop: '5rem' }}>

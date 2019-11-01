@@ -10,7 +10,7 @@ import Farmers from './pages/farmers';
 import LandingPage from './pages/landingPage';
 import Investment from './pages/investment';
 import FarmerProfile from './pages/farmerProfile';
-import farmersList from './static/data/farmersList';
+import farmersList from './assets/data/farmersList';
 
 const NoMatchPage = () => <h3>404 - Not found</h3>;
 
