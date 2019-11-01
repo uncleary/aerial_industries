@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';

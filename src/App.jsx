@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -14,12 +15,12 @@ import farmersList from './assets/data/farmersList';
 
 const NoMatchPage = () => <h3>404 - Not found</h3>;
 
-const FarmerProfilePage = ({ match, location }) => {
+const FarmerProfilePage = ({ match }) => {
   const { params: { userId } } = match;
   return (
     <FarmerProfile farmer={farmersList[userId - 1]} />
   );
-}
+};
 
 class App extends Component {
   constructor(props) {

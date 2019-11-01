@@ -1,7 +1,15 @@
+import farmer1 from '../img/farmer1.jpg';
+import farmer2 from '../img/farmer2.jpg';
+import farmer3 from '../img/farmer3.jpg';
+import farmer4 from '../img/farmer4.jpg';
+import farmer5 from '../img/farmer5.jpg';
+import farmer6 from '../img/farmer6.jpg';
+
+
 const farmersList = [
   {
     id: 1,
-    imgLink: require('../img/farmer1.jpg'),
+    imgLink: farmer1,
     farmerName: 'Musa Aliu',
     cropType: 'Maize',
     farmingStage: 'Pre-Emergence',
@@ -60,7 +68,7 @@ const farmersList = [
   },
   {
     id: 2,
-    imgLink: require('../img/farmer2.jpg'),
+    imgLink: farmer2,
     farmerName: 'Maryam Kabiru',
     cropType: 'Maize',
     farmingStage: 'Foilage',
@@ -120,7 +128,7 @@ const farmersList = [
   },
   {
     id: 3,
-    imgLink: require('../img/farmer3.jpg'),
+    imgLink: farmer3,
     farmerName: 'Okechukwu Obi',
     cropType: 'Rice, Maize',
     farmingStage: 'Harvest',
@@ -178,20 +186,8 @@ const farmersList = [
     },
   },
   {
-    id: 3,
-    imgLink: require('../img/farmer3.jpg'),
-    farmerName: 'Okechukwu Obi',
-    cropType: 'Rice, Maize',
-    farmingStage: 'Pre-Harvest',
-    location: {
-      region: 'SouthEast',
-      city: 'Ogoja',
-      coordinates: '6°39\'03"N 8°47\'49"E',
-    },
-  },
-  {
     id: 4,
-    imgLink: require('../img/farmer4.jpg'),
+    imgLink: farmer4,
     farmerName: 'Banjo Jide',
     cropType: 'Maize',
     farmingStage: 'Pre-Harvest',
@@ -203,7 +199,7 @@ const farmersList = [
   },
   {
     id: 5,
-    imgLink: require('../img/farmer5.jpg'),
+    imgLink: farmer5,
     farmerName: 'John A',
     cropType: 'Rice',
     farmingStage: 'Pre-Emergence',
@@ -215,7 +211,7 @@ const farmersList = [
   },
   {
     id: 6,
-    imgLink: require('../img/farmer6.jpg'),
+    imgLink: farmer6,
     farmerName: 'Hamza Beko',
     cropType: 'Rice',
     farmingStage: 'Post-Emergence',

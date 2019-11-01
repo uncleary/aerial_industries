@@ -1,13 +1,13 @@
+/* eslint-disable react/no-unused-state */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { VictoryPie } from 'victory';
 
 const sampleData = [
-  { x: "Region A", y: 35 },
-  { x: "Region B", y: 40 },
-  { x: "Region C", y: 55 },
-  { x: "Region D", y: 70 },
-  { x: "Region E", y: 20 },
+  { x: 'Region A', y: 35 },
+  { x: 'Region B', y: 40 },
+  { x: 'Region C', y: 55 },
+  { x: 'Region D', y: 70 },
+  { x: 'Region E', y: 20 },
 ];
 
 export default class PieChart extends React.Component {

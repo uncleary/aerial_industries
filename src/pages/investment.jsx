@@ -2,8 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../styles/config.scss';
-
 import { Container, Row, Col } from 'reactstrap';
+import LineGraph from '../components/lineGraph';
+import Title from '../components/title';
 
 const WhiteSection = styled.section`
   position: relative;
@@ -11,18 +12,15 @@ const WhiteSection = styled.section`
   padding: 6rem 0rem;
 `;
 
-const PageTitle = styled.h1`
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-`;
-
 const SectionTitle = styled.h2`
   margin-top: 3rem;
   text-align: left;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: medium;
+`;
+
+const StyledRow = styled(Row)`
+  margin: 3rem 0rem;
 `;
 
 const SummaryFigure = ({ desc, figure, green }) => (
@@ -31,7 +29,7 @@ const SummaryFigure = ({ desc, figure, green }) => (
     <h2
       className="text-center"
       style={{
-        fontWeight: 'bold',
+        fontWeight: '500',
         color: green !== undefined ? 'green' : 'black',
       }}>
       {figure}
@@ -40,7 +38,7 @@ const SummaryFigure = ({ desc, figure, green }) => (
 );
 
 const FundCard = ({ farmer }) => (
-  <Row
+  <StyledRow
     style={{
       backgroundColor: '#e9ecef',
       margin: '2rem',
@@ -67,7 +65,7 @@ const FundCard = ({ farmer }) => (
       <p className="text-muted">End Date</p>
       <h3>{farmer.endDate}</h3>
     </Col>
-  </Row>
+  </StyledRow>
 );
 
 const farmer1 = {
@@ -85,31 +83,36 @@ export default function Investment() {
     <div>
       <WhiteSection>
         <Container>
-          <Row>
+          <StyledRow>
             <Col>
-              <PageTitle>My Investments</PageTitle>
+              <Title>My Investments</Title>
             </Col>
-          </Row>
-          <Row className="mt-5">
+          </StyledRow>
+          <StyledRow>
             <SummaryFigure desc="Total Investment" figure="₦ 1,000,000" />
             <SummaryFigure desc="Current Valuation" figure="₦ 1,300,000" />
             <SummaryFigure green desc="Weighted Returns" figure="+30.0%" />
             <SummaryFigure desc="Supported Farmers" figure="5" />
-          </Row>
+          </StyledRow>
         </Container>
         <Container>
-          <Row>
+          <StyledRow>
             <Col>
               <SectionTitle>Investment Overview</SectionTitle>
+              <StyledRow>
+                <Col md={{ size: '6', offset: '3' }}>
+                  <LineGraph />
+                </Col>
+              </StyledRow>
             </Col>
-          </Row>
+          </StyledRow>
         </Container>
         <Container>
-          <Row>
+          <StyledRow>
             <Col>
               <SectionTitle>Fund Details</SectionTitle>
             </Col>
-          </Row>
+          </StyledRow>
           <FundCard farmer={farmer1} />
           <FundCard farmer={farmer1} />
           <FundCard farmer={farmer1} />

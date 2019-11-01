@@ -44,6 +44,16 @@
     text-align: right;
 }
 
+.timelineItemContent h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.timelineItemContent h4 {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
 .timelineItemContent::after {
     content: ' ';
     background-color: #fff;

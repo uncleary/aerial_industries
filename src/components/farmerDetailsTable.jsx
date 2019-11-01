@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Table } from 'reactstrap';
 
-const FarmerDetailsTable = ({farmerName, coord, details}) => (
-  // <div><h1>{JSON.stringify(details)}</h1></div>
+const FarmerDetailsTable = ({ farmerName, coord, details }) => (
   <Table hover>
     <thead>
       <tr>

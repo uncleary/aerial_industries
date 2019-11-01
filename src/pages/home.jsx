@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -33,6 +34,7 @@ const StyledCard = styled(Card)`
   color: 'black';
   padding: 2rem;
   background-color: #75c581;
+  border-color: transparent;
   &:hover {
     background-color: #a5baa6;
   }
@@ -48,6 +50,7 @@ const StyledCard = styled(Card)`
 const SloganBig = styled.h2`
   font-size: 2.5rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
 `;
 
 const SloganSmall = styled.h3``;
@@ -70,8 +73,8 @@ const HoverCard = styled.div`
 `;
 
 const LogoImage = styled.img`
-  max-height: 100px;  
-  max-width: ${props => 100 / props.numElements}%;
+  max-height: 100px;
+  max-width: ${(props) => 100 / props.numElements}%;
   padding: 1rem;
   margin: auto;
   display: inline;
@@ -183,24 +186,26 @@ export default function Home() {
       <Container>
         <Row style={{ marginTop: '5rem' }}>
           <Col md={{ size: 10, offset: 1 }}>
-            <h3 style={{ fontWeight: 'bold' }}>Supported By</h3>
+            <h3>Supported By</h3>
           </Col>
         </Row>
         <Row>
           <Col md={{ size: 10, offset: 1 }} style={{ textAlign: 'center' }}>
-            { supporterLogosArray.map(( src ) =>
-              <LogoImage numElements={supporterLogosArray.length} src={src} /> )}
+            {supporterLogosArray.map((src) => (
+              <LogoImage numElements={supporterLogosArray.length} src={src} />
+            ))}
           </Col>
         </Row>
         <Row style={{ marginTop: '5rem' }}>
           <Col md={{ size: 10, offset: 1 }}>
-            <h3 style={{ fontWeight: 'bold' }}>Media</h3>
+            <h3>Media</h3>
           </Col>
         </Row>
         <Row>
           <Col md={{ size: 10, offset: 1 }} style={{ textAlign: 'center' }}>
-            { mediaLogosArray.map(( src ) =>
-              <LogoImage numElements={mediaLogosArray.length} src={src} /> )}
+            {mediaLogosArray.map((src) => (
+              <LogoImage numElements={mediaLogosArray.length} src={src} />
+            ))}
           </Col>
         </Row>
       </Container>

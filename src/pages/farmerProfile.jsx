@@ -2,7 +2,7 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import '../styles/config.scss';
@@ -15,6 +15,7 @@ import Timeline from '../components/timeline';
 import LineGraph from '../components/lineGraph';
 import PieChart from '../components/pieChart';
 import FarmerDetailsTable from '../components/farmerDetailsTable';
+import Title from '../components/title';
 
 const StyledRow = styled(Row)`
   margin: 5rem 0rem;
@@ -23,7 +24,7 @@ const StyledRow = styled(Row)`
 const ClickToInvestCard = () => (
   <Row style={{ marginBottom: '5rem' }}>
     <Col
-      md={{ size: 8, offset: 2 }}
+      md={{ size: 10, offset: 1 }}
       style={{
         textAlign: 'left',
         backgroundColor: '#e9ecef',
@@ -33,7 +34,15 @@ const ClickToInvestCard = () => (
       }}>
       <h2 style={{ fontWeight: 'bold' }}>Click to Invest!</h2>
       <p>Click here for further technical details</p>
-      <Button>Invest</Button>
+      <Button
+        style={{
+          padding: '0.5rem 3rem',
+          fontSize: '1.5rem',
+          letterSpacing: '1px',
+          marginTop: '1rem',
+        }}>
+        Invest
+      </Button>
     </Col>
   </Row>
 );
@@ -44,7 +53,7 @@ const FarmerProfile = (farmerParent) => {
   // const img1Path = require('' + farmerParent.farmer.imgLink);
   const img2Path = require('../assets/img/img2farmer' + thisId + '.jpg');
   const img3Path = require('../assets/img/img3farmer' + thisId + '.jpg');
-  
+
   return (
     <Container style={{ paddingTop: '5rem' }}>
       <StyledRow>
@@ -55,7 +64,9 @@ const FarmerProfile = (farmerParent) => {
             style={{ maxWidth: '100%' }} />
         </Col>
         <Col md="auto">
-          <h3 style={{ fontWeight: 'bold', fontSize: '2rem' }}>{farmerParent.farmer.farmerName + '\'s Farm' }</h3>
+          <Title style={{ padding: '0rem' }}>
+            {farmerParent.farmer.farmerName + "'s Farm"}
+          </Title>
           <h4 style={{ fontColor: '#666' }}>
             {'in '
               + farmerParent.farmer.location.city
@@ -73,16 +84,24 @@ const FarmerProfile = (farmerParent) => {
             style={{
               maxWidth: '90%',
               margin: 'auto',
-              display: 'block' 
+              display: 'block',
             }} />
         </Col>
         <Col md="6">
-          <h4 style={{ color: '#495057' }}>{'Crop Type: ' + farmerParent.farmer.farmingStage}</h4>
-          <h4 style={{ color: '#868e96' }}>{'Current Stage: ' + farmerParent.farmer.cropType}</h4>
+          <h4 style={{ color: '#495057' }}>
+            {'Crop Type: ' + farmerParent.farmer.farmingStage}
+          </h4>
+          <h4 style={{ color: '#868e96' }}>
+            {'Current Stage: ' + farmerParent.farmer.cropType}
+          </h4>
           <div style={{ marginTop: '3rem', textAlign: 'center' }}>
             <h2>{farmerParent.farmer.details.section1.title}</h2>
-            <h2 style={{ fontSize: '4rem', color: 'green' }}>{farmerParent.farmer.details.section1.percent}</h2>
-            <p style={{ color: '#868e96' }}>{farmerParent.farmer.details.section1.desc}</p>
+            <h2 style={{ fontSize: '4rem', color: 'green' }}>
+              {farmerParent.farmer.details.section1.percent}
+            </h2>
+            <p style={{ color: '#868e96' }}>
+              {farmerParent.farmer.details.section1.desc}
+            </p>
           </div>
         </Col>
       </StyledRow>
@@ -106,8 +125,8 @@ const FarmerProfile = (farmerParent) => {
           <h2
             style={{
               fontStyle: 'italic',
-              fontSize: '3rem',
-              color: 'red',
+              fontSize: '2.5rem',
+              color: '#e16565',
               paddingBottom: '1rem',
             }}>
             {farmerParent.farmer.details.section2.bigTitle}
@@ -116,7 +135,7 @@ const FarmerProfile = (farmerParent) => {
             {farmerParent.farmer.details.section2.desc.map((item, index) => (
               <p key={index}>
                 <strong>{item.key}</strong>
-                { ': ' + item.value}
+                {': ' + item.value}
               </p>
             ))}
           </div>
@@ -154,9 +173,13 @@ const FarmerProfile = (farmerParent) => {
         </Col>
       </StyledRow>
       <StyledRow>
-        <Col md='auto'>
+        <Col md="auto">
           <h2>Precipitation</h2>
-          <div style={{ margin: 'auto' }}><LineGraph /></div>
+          <StyledRow>
+            <Col md={{ size: '6', offset: '3' }}>
+              <LineGraph />
+            </Col>
+          </StyledRow>
         </Col>
       </StyledRow>
     </Container>

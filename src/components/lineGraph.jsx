@@ -1,7 +1,12 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {
-  VictoryChart, VictoryZoomContainer, VictoryLine, VictoryBrushContainer, VictoryAxis,
+  VictoryChart,
+  VictoryZoomContainer,
+  VictoryLine,
+  VictoryBrushContainer,
+  VictoryAxis,
 } from 'victory';
 
 export default class LineGraph extends React.Component {
@@ -30,7 +35,7 @@ export default class LineGraph extends React.Component {
               responsive={false}
               zoomDimension="x"
               zoomDomain={this.state.zoomDomain}
-              onZoomDomainChange={this.handleZoom.bind(this)}/>
+              onZoomDomainChange={this.handleZoom.bind(this)} />
           )}>
           <VictoryLine
             style={{
@@ -45,7 +50,7 @@ export default class LineGraph extends React.Component {
               { x: new Date(2005, 1, 1), y: 305 },
               { x: new Date(2011, 1, 1), y: 270 },
               { x: new Date(2015, 1, 1), y: 470 },
-            ]}/>
+            ]} />
         </VictoryChart>
 
         <VictoryChart
@@ -63,7 +68,7 @@ export default class LineGraph extends React.Component {
               responsive={false}
               brushDimension="x"
               brushDomain={this.state.selectedDomain}
-              onBrushDomainChange={this.handleBrush.bind(this)}/>
+              onBrushDomainChange={this.handleBrush.bind(this)} />
           )}>
           <VictoryAxis
             tickValues={[

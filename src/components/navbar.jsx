@@ -16,22 +16,35 @@ export default function MyNavbar() {
 
   return (
     <Navbar color="light" light expand="md">
-      <NavbarBrand className='mr-3' href="/">Home</NavbarBrand>
-      <NavbarBrand href="/welcome">iPollen8</NavbarBrand>
+      <NavbarBrand
+        className="mr-3"
+        href="/"
+        style={{ marginLeft: '1rem', marginRight: '1rem', fontWeight: '700' }}>
+        Home
+      </NavbarBrand>
+      <NavbarBrand href="/welcome" style={{ color: '#888', fontWeight: '700' }}>
+        iPollen8
+      </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/funder">Funder</NavLink>
+            <NavLink href="/investment">Investors</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/supplier">Supplier</NavLink>
+            <NavLink href="/supplier">Suppliers</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/farmers">Farmers</NavLink>
           </NavItem>
-          <Button>
-            Sign Up
+          <Button
+            style={{
+              marginLeft: '1rem',
+              marginRight: '1rem',
+              padding: '0.5rem 2rem',
+              fontWeight: '500',
+            }}>
+            Register
           </Button>
         </Nav>
       </Collapse>

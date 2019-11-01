@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import customStyle from '../styles/timeline.css';
@@ -9,7 +11,8 @@ const TimelineItem = ({ status, funder }) => (
         {status}
       </span>
       <time>Feb 2020</time>
-      <p>{funder}</p>
+      <h3>{status}</h3>
+      <h4>{funder}</h4>
       <span className={customStyle.circle} />
     </div>
   </div>

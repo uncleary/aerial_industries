@@ -2,18 +2,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../styles/config.scss';
-
 import {
   Container,
   Row,
   Col,
-  Card,
-  CardTitle,
-  CardBody,
-  CardImg,
   Button,
 } from 'reactstrap';
 import EmailSignUp from '../components/signup';
+import PointCard from '../components/pointCard';
+import coverImage from '../assets/img/background/womanfarmer.jpg';
+import sproutIcon from '../assets/img/icons/001-sprout.png';
+import worldIcon from '../assets/img/icons/007-world.png';
+import solarIcon from '../assets/img/icons/008-solar-energy.png';
+import farmerIcon from '../assets/img/icons/002-farmer.png';
+import peppersImage from '../assets/img/background/peppers.jpg';
 
 const GraySection = styled.section`
   position: relative;
@@ -21,105 +23,74 @@ const GraySection = styled.section`
   padding: 6rem 0rem;
 `;
 
-const WhiteSection = styled.section`
+const TransparentSection = styled.section`
   position: relative;
-  background-color: white;
   padding: 6rem 0rem;
+`;
+
+const CoverImage = styled.div`
+  background-image: url(${coverImage});
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  padding-left: 2rem;
 `;
 
 const MasterHeadH1 = styled.h1`
   margin-top: 7rem;
   text-align: left;
   font-size: 5rem;
-  font-weight: bold;
+  font-weight: medium;
+  color: white;
 `;
 
 const SectionH1 = styled.h1`
   margin-top: 4rem;
-  margin-botton: 1rem;
+  margin-bottom: 2rem;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: medium;
 `;
 
 const SectionH2 = styled.h2`
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
   font-size: 1.7rem;
   line-height: 1.5;
+  color: #444;
 `;
 
 const SectionH3 = styled.h3`
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.5;
 `;
 
-const CoCard = ({ subtitle }) => (
-  <Card>
-    <CardImg
-      top
-      width="100%"
-      src="https://cdn5.vectorstock.com/i/1000x1000/76/54/avatar-male-farmer-icon-flat-style-vector-11427654.jpg"
-      alt="Card image cap" />
-    <CardBody>
-      <CardTitle
-        style={{
-          textAlign: 'left',
-          width: '90%',
-          margin: 'auto',
-          minHeight: '100px',
-        }}>
-        {subtitle}
-      </CardTitle>
-      <Button>See More</Button>
-    </CardBody>
-    {/* <CardText>Nutrients</CardText> */}
-    {/* <Link to={linkTo || '/'} className="btn btn-outline-primary">
-      Visit Company
-    </Link>
-    <h4 style={{ textAlign: 'right', paddingTop: '1rem' }}>{companyName}</h4> */}
-  </Card>
-);
-
-// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
-// General scroll to element function
-
-// const ScrollDemo = () => {
-//   const myRef = useRef(null);
-//   const executeScroll = () => scrollToRef(myRef);
-
-//   return (
-//     <>
-//       <div ref={myRef}>I wanna be seen</div>
-//       <button onClick={executeScroll}> Click to scroll </button>
-//     </>
-//   );
-// };
-
 export default function LandingPage() {
   return (
     <div>
-      <WhiteSection>
-        <Container>
-          <Row>
-            <Col>
-              <MasterHeadH1>Invest in Your Meals</MasterHeadH1>
-              <SectionH2 left>
-                We care about how our food is grown.
-                <br />
-                We care about the communities that grow our food.
-              </SectionH2>
-              <Button color="secondary" size="lg" className="mt-5">
-                Find out more
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </WhiteSection>
+      <CoverImage>
+        <TransparentSection>
+          <Container>
+            <Row>
+              <Col>
+                <MasterHeadH1>Invest in Your Meals</MasterHeadH1>
+                <SectionH2 left>
+                  We care about how our food is grown.
+                  <br />
+                  We care about the communities that grow our food.
+                </SectionH2>
+                <Button color="secondary" size="lg" className="mt-5">
+                  Find out more
+                </Button>
+              </Col>
+            </Row>
+          </Container>
+        </TransparentSection>
+      </CoverImage>
 
       <GraySection>
         <Container>
@@ -131,22 +102,22 @@ export default function LandingPage() {
           </Row>
           <Row>
             <Col md="3">
-              <CoCard subtitle="Zero Residue Farmers" />
+              <PointCard subtitle="Zero Residue Farmers" icon={sproutIcon} />
             </Col>
             <Col md="3">
-              <CoCard subtitle="Precision Mechanization " />
+              <PointCard subtitle="Precision Mechanization" icon={farmerIcon} />
             </Col>
             <Col md="3">
-              <CoCard subtitle="Community Impact" />
+              <PointCard subtitle="Community Impact" icon={worldIcon} />
             </Col>
             <Col md="3">
-              <CoCard subtitle="Innovative Farms" />
+              <PointCard subtitle="Innovative Farms" icon={solarIcon} />
             </Col>
           </Row>
         </Container>
       </GraySection>
 
-      <WhiteSection>
+      <TransparentSection>
         <Container>
           <Row>
             <Col md={{ size: 8 }}>
@@ -170,9 +141,12 @@ export default function LandingPage() {
                 Fund Farmers
               </Button>
             </Col>
+            <Col md="4">
+              <img alt="fresh peppers" style={{ maxWidth: '100%', padding: '1rem', marginTop: '1rem' }} src={peppersImage} />
+            </Col>
           </Row>
         </Container>
-      </WhiteSection>
+      </TransparentSection>
 
       <GraySection>
         <Container>
@@ -205,16 +179,16 @@ export default function LandingPage() {
         </Container>
       </GraySection>
 
-      <WhiteSection>
+      <TransparentSection>
         <Container>
           <Row>
-            <Col md="6" offset="3" style={{ margin: 'auto' }}>
-              <SectionH1>Join the Community</SectionH1>
+            <Col md="8" offset="2" style={{ margin: 'auto' }}>
+              <SectionH2>Create your investment account with iPollen8</SectionH2>
               <EmailSignUp />
             </Col>
           </Row>
         </Container>
-      </WhiteSection>
+      </TransparentSection>
     </div>
   );
 }
