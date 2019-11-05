@@ -5,11 +5,21 @@ import farmer4 from '../img/farmer4.jpg';
 import farmer5 from '../img/farmer5.jpg';
 import farmer6 from '../img/farmer6.jpg';
 
+import img2farmer1 from '../img/img2farmer1.jpg';
+import img2farmer2 from '../img/img2farmer2.jpg';
+import img2farmer3 from '../img/img2farmer3.jpg';
+
+import img3farmer1 from '../img/img3farmer1.jpg';
+import img3farmer2 from '../img/img3farmer2.jpg';
+import img3farmer3 from '../img/img3farmer3.jpg';
+
 
 const farmersList = [
   {
     id: 1,
     imgLink: farmer1,
+    imgLink2: img2farmer1,
+    imgLink3: img3farmer1,
     farmerName: 'Musa Aliu',
     cropType: 'Maize',
     farmingStage: 'Pre-Emergence',
@@ -69,6 +79,8 @@ const farmersList = [
   {
     id: 2,
     imgLink: farmer2,
+    imgLink2: img2farmer2,
+    imgLink3: img3farmer2,
     farmerName: 'Maryam Kabiru',
     cropType: 'Maize',
     farmingStage: 'Foilage',
@@ -129,6 +141,8 @@ const farmersList = [
   {
     id: 3,
     imgLink: farmer3,
+    imgLink2: img2farmer3,
+    imgLink3: img3farmer3,
     farmerName: 'Okechukwu Obi',
     cropType: 'Rice, Maize',
     farmingStage: 'Harvest',
