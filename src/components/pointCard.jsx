@@ -6,17 +6,16 @@ import {
   CardTitle,
   CardBody,
   CardImg,
-  Button,
 } from 'reactstrap';
 
 const PointCard = ({ subtitle, icon }) => (
-  <Card>
+  <Card style={{ marginBottom: '1.5rem' }}>
     <CardImg
       top
       width="100%"
       src={icon}
       alt="Card image cap"
-      style={{ padding: '4rem' }} />
+      style={{ padding: '4rem', filter: 'grayscale(100%)' }} />
     <CardBody>
       <CardTitle
         style={{
@@ -25,9 +24,9 @@ const PointCard = ({ subtitle, icon }) => (
           margin: 'auto',
           paddingBottom: '2rem',
         }}>
-        <h4>{subtitle}</h4>
+        <p>{subtitle}</p>
       </CardTitle>
-      <Button>See More</Button>
+      <p style={{ fontWeight: 'bold' }}>{'See More >'}</p>
     </CardBody>
   </Card>
 );

@@ -15,11 +15,12 @@ export default function MyNavbar() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md">
+    <Navbar color="light" light expand="md" className="mx-3">
       <NavbarBrand
         className="mr-3"
         href="/"
-        style={{ marginLeft: '1rem', marginRight: '1rem', fontWeight: '700' }}>
+        style={{ marginLeft: '1rem', marginRight: '1rem', fontWeight: '700' }}
+      >
         Home
       </NavbarBrand>
       <NavbarBrand href="/welcome" style={{ color: '#888', fontWeight: '700' }}>
@@ -29,23 +30,28 @@ export default function MyNavbar() {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/investment">Investors</NavLink>
+            <NavLink href="/funders">Funders</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/supplier">Suppliers</NavLink>
+            <NavLink href="/suppliers">Suppliers</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/farmers">Farmers</NavLink>
           </NavItem>
-          <Button
-            style={{
-              marginLeft: '1rem',
-              marginRight: '1rem',
-              padding: '0.5rem 2rem',
-              fontWeight: '500',
-            }}>
-            Register
-          </Button>
+          <NavItem>
+            <NavLink href="/signup" style={{ padding: '0' }}>
+              <Button
+                outline
+                style={{
+                  marginLeft: '1rem',
+                  marginRight: '1rem',
+                  padding: '0.5rem 2rem',
+                  fontWeight: '500',
+                }}>
+                Sign Up
+              </Button>
+            </NavLink>
+          </NavItem>
         </Nav>
       </Collapse>
     </Navbar>

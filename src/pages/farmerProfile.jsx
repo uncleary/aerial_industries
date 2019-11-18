@@ -33,6 +33,7 @@ const ClickToInvestCard = () => (
       <h2 style={{ fontWeight: 'bold' }}>Click to Invest!</h2>
       <p>Click here for further technical details</p>
       <Button
+        outline
         style={{
           padding: '0.5rem 3rem',
           fontSize: '1.5rem',

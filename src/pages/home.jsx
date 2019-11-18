@@ -14,13 +14,13 @@ import mediaLogosArray from '../assets/img/media-logo';
 const MasterHead = styled.section`
   position: relative;
   background-color: white;
-  padding: 6rem 4rem;
+  padding: 3rem 1rem;
 `;
 
 const Subtitle = styled.h2`
   color: #868e96;
   padding-bottom: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 `;
 
@@ -33,6 +33,7 @@ const InvestButton = styled(Button)`
 const StyledCard = styled(Card)`
   color: 'black';
   padding: 2rem;
+  margin-bottom: 1.5rem;
   background-color: #75c581;
   border-color: transparent;
   &:hover {
@@ -75,9 +76,12 @@ const HoverCard = styled.div`
 const LogoImage = styled.img`
   max-height: 100px;
   max-width: ${(props) => 100 / props.numElements}%;
-  padding: 1rem;
+  padding: 0.25rem;
   margin: auto;
   display: inline;
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const CoCard = ({
@@ -184,25 +188,25 @@ export default function Home() {
         </Row>
       </Container>
       <Container>
-        <Row style={{ marginTop: '5rem' }}>
+        <Row style={{ marginTop: '1rem' }}>
           <Col md={{ size: 10, offset: 1 }}>
             <h3>Supported By</h3>
           </Col>
         </Row>
         <Row>
-          <Col md={{ size: 10, offset: 1 }} style={{ textAlign: 'center' }}>
+          <Col style={{ textAlign: 'center' }}>
             {supporterLogosArray.map((src) => (
               <LogoImage numElements={supporterLogosArray.length} src={src} />
             ))}
           </Col>
         </Row>
-        <Row style={{ marginTop: '5rem' }}>
+        <Row style={{ marginTop: '1rem' }}>
           <Col md={{ size: 10, offset: 1 }}>
             <h3>Media</h3>
           </Col>
         </Row>
         <Row>
-          <Col md={{ size: 10, offset: 1 }} style={{ textAlign: 'center' }}>
+          <Col style={{ textAlign: 'center' }}>
             {mediaLogosArray.map((src) => (
               <LogoImage numElements={mediaLogosArray.length} src={src} />
             ))}

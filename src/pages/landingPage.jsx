@@ -6,11 +6,12 @@ import {
   Container,
   Row,
   Col,
-  Button,
 } from 'reactstrap';
 import EmailSignUp from '../components/signup';
 import PointCard from '../components/pointCard';
-import coverImage from '../assets/img/background/womanfarmer.jpg';
+import BlackButton from '../components/blackButton';
+
+import coverImage from '../assets/img/background/farmers-drawing.jpg';
 import sproutIcon from '../assets/img/icons/001-sprout.png';
 import worldIcon from '../assets/img/icons/007-world.png';
 import solarIcon from '../assets/img/icons/008-solar-energy.png';
@@ -20,45 +21,53 @@ import peppersImage from '../assets/img/background/peppers.jpg';
 const GraySection = styled.section`
   position: relative;
   background-color: #e9ecef;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 `;
 
 const TransparentSection = styled.section`
   position: relative;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 `;
 
 const CoverImage = styled.div`
   background-image: url(${coverImage});
-  background-size: cover;
-  padding-top: 2rem;
-  padding-bottom: 8rem;
-  padding-left: 2rem;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 6rem;
+
+  @media (min-width: 768px) {
+    background-size: auto;
+    margin-top: -5rem;
+    padding-bottom: 6rem;
+
+  }
 `;
 
 const MasterHeadH1 = styled.h1`
-  margin-top: 7rem;
-  text-align: left;
-  font-size: 5rem;
+  margin-top: 8rem;
+  font-size: 4rem;
   font-weight: medium;
-  color: white;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const SectionH1 = styled.h1`
   margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
   font-size: 3rem;
-  font-weight: medium;
 `;
 
 const SectionH2 = styled.h2`
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 1.5;
-  color: #444;
+  color: #666;
 `;
 
 const SectionH3 = styled.h3`
@@ -67,6 +76,15 @@ const SectionH3 = styled.h3`
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.5;
+  color: #666;
+`;
+
+const Placeholder = styled.div`
+  border: solid 125px #444;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
 `;
 
 export default function LandingPage() {
@@ -80,12 +98,11 @@ export default function LandingPage() {
                 <MasterHeadH1>Invest in Your Meals</MasterHeadH1>
                 <SectionH2 left>
                   We care about how our food is grown.
-                  <br />
+                </SectionH2>
+                <SectionH2 left>
                   We care about the communities that grow our food.
                 </SectionH2>
-                <Button color="secondary" size="lg" className="mt-5">
-                  Find out more
-                </Button>
+                <BlackButton text="Find out more" />
               </Col>
             </Row>
           </Container>
@@ -137,9 +154,7 @@ export default function LandingPage() {
                   Adesina Akinwumi, African Development Bank
                 </footer>
               </blockquote>
-              <Button color="secondary" size="lg" className="mt-5">
-                Fund Farmers
-              </Button>
+              <BlackButton text="Fund Farmers" />
             </Col>
             <Col md="4">
               <img alt="fresh peppers" style={{ maxWidth: '100%', padding: '1rem', marginTop: '1rem' }} src={peppersImage} />
@@ -158,37 +173,30 @@ export default function LandingPage() {
           </Row>
           <Row>
             <Col md="4">
-              <p>
+              <Placeholder />
+              <p className="mt-3">
                 Aerial Industries applies all crop enhancers, protectants and
                 sti...
               </p>
             </Col>
             <Col md="4">
-              <p>
+              <Placeholder />
+              <p className="mt-3">
                 No synthetic compounds are in the residue tests conducted on...
               </p>
             </Col>
             <Col md="4">
-              <p>
+              <Placeholder />
+              <p className="mt-3">
                 Bayo practices the old techniques of conditioning for soil
                 aggregat...
               </p>
             </Col>
           </Row>
-          <Row />
         </Container>
       </GraySection>
 
-      <TransparentSection>
-        <Container>
-          <Row>
-            <Col md="8" offset="2" style={{ margin: 'auto' }}>
-              <SectionH2>Create your investment account with iPollen8</SectionH2>
-              <EmailSignUp />
-            </Col>
-          </Row>
-        </Container>
-      </TransparentSection>
+      <EmailSignUp />
     </div>
   );
 }

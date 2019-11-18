@@ -6,7 +6,6 @@ const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 4px;
   color: black;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 1rem 0rem;
 `;
 export default Title;
