@@ -16,15 +16,17 @@ const WhiteBgSection = styled.section`
   padding: 6rem 0rem;
 `;
 
-const SingleFilterBox = ({ filterName, filterArray }) => (
+const SingleFilterBox = ({ filterName, filterArray, type }) => (
   <div className="mt-5">
     <h3>{filterName}</h3>
     <ColoredLine color="gray" />
-    <FilterBox filters={filterArray} />
+    <FilterBox filters={filterArray} type={type} />
   </div>
 );
 
 const filterCategories = [
+  { filter: 'Continent', filterArray: ['Africa', 'Southeast Asia', 'South America'], type: 'dropdown' },
+  { filter: 'Country', filterArray: ['Nigeria', 'Ghana', 'Kenya'], type: 'dropdown' },
   { filter: 'Region', filterArray: ['NorthEast', 'SouthWest', 'SouthEast'] },
   { filter: 'Produce Type', filterArray: ['Rice', 'Plantain', 'Maize'] },
   {
@@ -64,7 +66,8 @@ export default function Farmers() {
               <SingleFilterBox
                 key={index}
                 filterName={item.filter}
-                filterArray={item.filterArray} />
+                filterArray={item.filterArray}
+                type={item.type} />
             ))}
           </Col>
           <Col md="9">

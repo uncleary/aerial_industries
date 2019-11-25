@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import styled from 'styled-components';
 
 import {
   Card,
@@ -8,14 +9,31 @@ import {
   CardImg,
 } from 'reactstrap';
 
+const StyledCard = styled(Card)`
+  margin: 2rem;
+
+  @media (min-width: 576px) {
+    margin: 1rem 0rem;
+  }
+
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+
+  }
+`;
+
 const PointCard = ({ subtitle, icon }) => (
-  <Card style={{ marginBottom: '1.5rem' }}>
+  <StyledCard>
     <CardImg
       top
       width="100%"
       src={icon}
       alt="Card image cap"
-      style={{ padding: '4rem', filter: 'grayscale(100%)' }} />
+      style={{
+        padding: '2rem', margin: 'auto', maxWidth: '80%', filter: 'grayscale(100%)',
+      }} />
     <CardBody>
       <CardTitle
         style={{
@@ -28,7 +46,7 @@ const PointCard = ({ subtitle, icon }) => (
       </CardTitle>
       <p style={{ fontWeight: 'bold' }}>{'See More >'}</p>
     </CardBody>
-  </Card>
+  </StyledCard>
 );
 
 export default PointCard;

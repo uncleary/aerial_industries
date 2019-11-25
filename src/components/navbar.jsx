@@ -15,25 +15,24 @@ export default function MyNavbar() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md" className="mx-3">
+    <Navbar color="light" light expand="md">
       <NavbarBrand
         className="mr-3"
         href="/"
-        style={{ marginLeft: '1rem', marginRight: '1rem', fontWeight: '700' }}
-      >
+        style={{ marginLeft: '1rem', marginRight: '1rem', fontWeight: '700' }}>
         Home
       </NavbarBrand>
-      <NavbarBrand href="/welcome" style={{ color: '#888', fontWeight: '700' }}>
+      <NavbarBrand href="/ipollen8" style={{ color: '#888', fontWeight: '700' }}>
         iPollen8
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto" navbar>
+        <Nav className="ml-auto text-center" navbar>
           <NavItem>
             <NavLink href="/funders">Funders</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/suppliers">Suppliers</NavLink>
+            <NavLink href="/ipollen8">Suppliers</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/farmers">Farmers</NavLink>
@@ -48,7 +47,7 @@ export default function MyNavbar() {
                   padding: '0.5rem 2rem',
                   fontWeight: '500',
                 }}>
-                Sign Up
+                Connect
               </Button>
             </NavLink>
           </NavItem>

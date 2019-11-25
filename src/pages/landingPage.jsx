@@ -21,36 +21,80 @@ import peppersImage from '../assets/img/background/peppers.jpg';
 const GraySection = styled.section`
   position: relative;
   background-color: #e9ecef;
-  padding: 4rem 0rem;
+  padding: 6rem 1rem;
+
+  @media (min-width: 576px) {
+    padding: 4rem 0rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 4rem 0rem;
+
+  }
+  @media (min-width: 992px) {
+    padding: 4rem 0rem;
+
+  }
 `;
 
 const TransparentSection = styled.section`
   position: relative;
-  padding: 4rem 0rem;
+    padding: 6rem 1rem;
+  
+  @media (min-width: 576px) {
+    padding: 4rem 0rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 4rem 0rem;
+
+  }
+  @media (min-width: 992px) {
+    padding: 4rem 0rem;
+
+  }
 `;
 
 const CoverImage = styled.div`
   background-image: url(${coverImage});
-  background-position-x: right;
+  background-position-x: -2rem;
   background-repeat: no-repeat;
   background-size: contain;
-  padding-top: 6rem;
+  padding-top: 12rem;
 
+  @media (min-width: 576px) {
+    padding-top: 20rem;
+  }
+  
   @media (min-width: 768px) {
-    background-size: auto;
     margin-top: -5rem;
     padding-bottom: 6rem;
+  }
+
+  @media (min-width: 992px) {
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    padding-top: 10rem;
 
   }
 `;
 
 const MasterHeadH1 = styled.h1`
-  margin-top: 8rem;
-  font-size: 4rem;
-  font-weight: medium;
-  text-align: center;
+  font-size: 3rem;
+
+  @media (min-width: 576px) {
+    margin-top: 8rem;
+  }
+
   @media (min-width: 768px) {
-    text-align: left;
+    margin-top: 16rem;
+    font-size: 4rem;
+
+  }
+  @media (min-width: 992px) {
+    font-size: 3rem;
+    margin-top: 0rem;
   }
 `;
 
@@ -62,12 +106,24 @@ const SectionH1 = styled.h1`
 `;
 
 const SectionH2 = styled.h2`
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+
   text-align: ${(props) => (props.left ? 'left' : 'center')};
-  font-size: 1.4rem;
-  line-height: 1.5;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
   color: #666;
+
+  @media (min-width: 576px) {
+  }
+
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+
+  }
 `;
 
 const SectionH3 = styled.h3`
@@ -118,16 +174,16 @@ export default function LandingPage() {
             </Col>
           </Row>
           <Row>
-            <Col md="3">
+            <Col md="6" lg="3">
               <PointCard subtitle="Zero Residue Farmers" icon={sproutIcon} />
             </Col>
-            <Col md="3">
+            <Col md="6" lg="3">
               <PointCard subtitle="Precision Mechanization" icon={farmerIcon} />
             </Col>
-            <Col md="3">
+            <Col md="6" lg="3">
               <PointCard subtitle="Community Impact" icon={worldIcon} />
             </Col>
-            <Col md="3">
+            <Col md="6" lg="3">
               <PointCard subtitle="Innovative Farms" icon={solarIcon} />
             </Col>
           </Row>
@@ -171,7 +227,7 @@ export default function LandingPage() {
               <SectionH2>Make Money While Eating Healthier</SectionH2>
             </Col>
           </Row>
-          <Row>
+          <Row className="mt-3">
             <Col md="4">
               <Placeholder />
               <p className="mt-3">

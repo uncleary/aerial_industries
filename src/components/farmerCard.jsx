@@ -3,14 +3,16 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  Col, Card, Button, CardImg, CardBody, CardTitle,
+  Col, Card, CardImg, CardBody, CardTitle,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const FarmerCard = ({ farmerData }) => (
   <Col md="4" style={{ marginTop: '2rem' }}>
     <Card>
-      <CardImg top width="100%" src={farmerData.imgLink} alt="Farmer Image" />
+      <Link to={`/farmers/${farmerData.id < 4 ? farmerData.id : 3}`}>
+        <CardImg top width="100%" src={farmerData.imgLink} alt="Farmer Image" />
+      </Link>
       <CardBody>
         <CardTitle
           style={{
@@ -28,7 +30,7 @@ const FarmerCard = ({ farmerData }) => (
           <small className="text-muted">{farmerData.location.region}</small>
         </p>
         <Link to={`/farmers/${farmerData.id < 4 ? farmerData.id : 3}`}>
-          <Button>See More</Button>
+          <p style={{ color: 'black' }}>{'See More >'}</p>
         </Link>
       </CardBody>
     </Card>
