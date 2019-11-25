@@ -6,8 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack && cp build/index.html build/200.html",
-    "test": "jest --watchAll --coverage",
-    "deploy": "surge build --domain https://ipollen8.surge.sh"
+    "test": "jest --watchAll --coverage"
   },
   "lint-staged": {
     "*.{js,jsx,scss,css,md}": [
