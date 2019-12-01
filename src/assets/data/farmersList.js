@@ -81,7 +81,7 @@ const farmersList = [
     imgLink: farmer2,
     imgLink2: img2farmer2,
     imgLink3: img3farmer2,
-    farmerName: 'Maryam Kabiru',
+    farmerName: 'Mallam Kabiru',
     cropType: 'Maize',
     farmingStage: 'Foilage',
     location: {
@@ -202,7 +202,7 @@ const farmersList = [
   {
     id: 4,
     imgLink: farmer4,
-    farmerName: 'Banjo Jide',
+    farmerName: 'Betty Jide',
     cropType: 'Maize',
     farmingStage: 'Pre-Harvest',
     location: {
@@ -226,7 +226,7 @@ const farmersList = [
   {
     id: 6,
     imgLink: farmer6,
-    farmerName: 'Hamza Beko',
+    farmerName: 'Hannah Beko',
     cropType: 'Rice',
     farmingStage: 'Post-Emergence',
     location: {

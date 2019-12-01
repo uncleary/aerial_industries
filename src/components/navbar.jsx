@@ -32,7 +32,7 @@ export default function MyNavbar() {
             <NavLink href="/funders">Funders</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/ipollen8">Suppliers</NavLink>
+            <NavLink href="#">Suppliers</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/farmers">Farmers</NavLink>

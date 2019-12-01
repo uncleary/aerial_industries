@@ -20,8 +20,17 @@ const MasterHead = styled.section`
 const Subtitle = styled.h2`
   color: #868e96;
   padding-bottom: 3rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  text-align: center;
+  @media (min-width: 576px) {
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+    font-size: 1.5rem;
+
+  }
 `;
 
 const InvestButton = styled(Button)`
@@ -32,12 +41,15 @@ const InvestButton = styled(Button)`
 
 const StyledCard = styled(Card)`
   color: 'black';
-  // padding: 2rem;
+  box-shadow: 5px 5px 10px #777;
   margin-bottom: 1.5rem;
   background-color: #75c581;
   border-color: transparent;
+  transition: transform .2s;
+
   &:hover {
     background-color: #a5baa6;
+    transform: translateY(.3rem);
   }
   &.active {
     background-color: #a5baa6;
@@ -61,9 +73,9 @@ const StyledCard = styled(Card)`
 
 const SloganBig = styled.h2`
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-weight: normal;
-  font-size: 1.7rem;
+  font-size: 2rem;
 
   @media (min-width: 576px) {
     font-size: 2.5rem;
@@ -81,7 +93,7 @@ const SloganBig = styled.h2`
 
 const SloganSmall = styled.h3`
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
   @media (min-width: 576px) {
     font-size: 1.7rem;
@@ -192,9 +204,9 @@ export default function Home() {
   const co3 = {
     sloganBig: 'Energy',
     sloganSmall: 'Resource',
-    companyName: 'H.A.W.K',
+    companyName: 'H.A.W.K.',
     info:
-      'High Altitude Wing Kite provides clean electricity to power all your farm equipments remotely',
+      'High Altitude Wind Kite provides clean electricity to power all your farm equipments remotely',
   };
 
   return (
@@ -234,13 +246,13 @@ export default function Home() {
         </Row>
       </Container>
       <Container>
-        <Row style={{ marginTop: '3rem' }}>
+        <Row style={{ marginTop: '5rem' }}>
           <Col md={{ size: 10, offset: 1 }}>
             <h4>Supported By</h4>
           </Col>
         </Row>
         <Row>
-          <Col style={{ textAlign: 'center' }}>
+          <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
             {supporterLogosArray.map((logo) => (
               <a href={logo.link}>
                 <LogoImage numElements={supporterLogosArray.length} src={logo.image} />
@@ -248,13 +260,13 @@ export default function Home() {
             ))}
           </Col>
         </Row>
-        <Row style={{ marginTop: '1rem' }}>
+        <Row>
           <Col md={{ size: 10, offset: 1 }}>
             <h4>Media</h4>
           </Col>
         </Row>
         <Row>
-          <Col style={{ textAlign: 'center' }}>
+          <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
             {mediaLogosArray.map((logo) => (
               <a href={logo.link}>
                 <LogoImage numElements={mediaLogosArray.length} src={logo.image} />

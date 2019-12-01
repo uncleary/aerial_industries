@@ -90,19 +90,18 @@ const MailChimpHtmlForm = () => (
 
 
           </div>
-          <div className="mc-field-group size1of2">
+          {/* <div className="mc-field-group size1of2">
             <label htmlFor="mce-PHONE">Phone Number </label>
             <input
               type="text"
               name="PHONE"
               className
               id="mce-PHONE" />
-          </div>
+          </div> */}
           <div className="mc-address-group">
             <div className="mc-field-group">
               <label htmlFor="mce-ADDRESS-addr1">
                 Address
-                <RequiredSign />
               </label>
               <input
                 type="text"

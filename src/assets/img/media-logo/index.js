@@ -18,7 +18,7 @@ const links = [
   { image: Logo6, link: 'https://www.defenceweb.co.za/joint/science-a-defence-technology/nigerian-start-up-among-12-selected-for-development-by-airbus-bizlab' },
   { image: Logo7, link: 'https://youtu.be/bmwZPHOO6Rs' },
   { image: Logo8, link: 'http://fledge.co/fledgling/aerial-indusries/' },
-  { image: Logo9, link: 'https://www.youtube.com/watch?v=fbGDlx4ADwA&list=PL4A995VKDrz7aF26qlkauzmLfdNPyNZYu&index=8' },
+  { image: Logo9, link: 'https://youtu.be/nHv7r3RN-Vg' },
   { image: Logo10, link: 'https://youtu.be/t14xCnnYOXw' },
 ];
 

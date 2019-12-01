@@ -6,10 +6,18 @@ import {
   Col, Card, CardImg, CardBody, CardTitle,
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const StyledCard = styled(Card)`
+  transition: transform .2s;
+  &:hover {
+    transform: translateY(.3rem);
+  }
+`;
 
 const FarmerCard = ({ farmerData }) => (
   <Col md="4" style={{ marginTop: '2rem' }}>
-    <Card>
+    <StyledCard>
       <Link to={`/farmers/${farmerData.id < 4 ? farmerData.id : 3}`}>
         <CardImg top width="100%" src={farmerData.imgLink} alt="Farmer Image" />
       </Link>
@@ -33,7 +41,7 @@ const FarmerCard = ({ farmerData }) => (
           <p style={{ color: 'black' }}>{'See More >'}</p>
         </Link>
       </CardBody>
-    </Card>
+    </StyledCard>
   </Col>
 );
 export default FarmerCard;
