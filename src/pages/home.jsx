@@ -254,7 +254,7 @@ export default function Home() {
         <Row>
           <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
             {supporterLogosArray.map((logo) => (
-              <a href={logo.link}>
+              <a href={logo.link} target="_blank" rel="noopener noreferrer">
                 <LogoImage numElements={supporterLogosArray.length} src={logo.image} />
               </a>
             ))}
@@ -268,7 +268,7 @@ export default function Home() {
         <Row>
           <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
             {mediaLogosArray.map((logo) => (
-              <a href={logo.link}>
+              <a href={logo.link} target="_blank" rel="noopener noreferrer">
                 <LogoImage numElements={mediaLogosArray.length} src={logo.image} />
               </a>
             ))}
