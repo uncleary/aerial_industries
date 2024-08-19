@@ -1,29 +1,20 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-array-index-key */
-import React from 'react';
-import customStyle from '../styles/timeline.css';
+import "../styles/timeline.css";
 
 const TimelineItem = ({ status, funder }) => (
-  <div className={customStyle.timelineItem}>
-    <div className={customStyle.timelineItemContent}>
-      <span className={customStyle.tag}>
-        {status}
-      </span>
+  <div className="timelineItem">
+    <div className="timelineItemContent">
+      <span className="tag">{status}</span>
       <time>Feb 2020</time>
       <h3>{status}</h3>
       <h4>{funder}</h4>
-      <span className={customStyle.circle} />
+      <span className="circle" />
     </div>
   </div>
 );
 
-TimelineItem.propTypes = {
-
-};
-
 const Timeline = (props) => (
-  <div className={customStyle.timelineContainer}>
+  <div className="timelineContainer">
     {props.timelineData.map((data, idx) => (
       <TimelineItem status={data.status} funder={data.funder} key={idx} />
     ))}

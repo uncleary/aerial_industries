@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 
-import { Button } from 'reactstrap';
+import { Button } from "reactstrap";
 
 const BlackButton = ({ text }) => (
   <Button
     size="lg"
     style={{
-      backgroundColor: '#333',
-      borderColor: '#333',
-      marginTop: '1.5rem',
-      padding: '1rem 2rem',
-    }}>
+      backgroundColor: "#333",
+      borderColor: "#333",
+      marginTop: "1.5rem",
+      padding: "1rem 2rem",
+    }}
+  >
     {text}
   </Button>
 );

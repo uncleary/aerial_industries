@@ -6,7 +6,7 @@ This is a visual demo of the iPollen8 project built with React and static data.
 
 ![Portfolio page](./doc/img/home-ss.png)
 
-Built using the the [Webpack react minimal boilerplate](https://medium.com/@hashem.khalifa/minimal-webpack-and-react-starter-boilerplate-seriously-d90a673e134f)
+Built using the the [Vite + React](https://vitejs.dev)
 
 ## To get started with the project
 
@@ -14,7 +14,7 @@ After cloning this git repository, open your terminal, go into the folder and ru
 
 ### Development
 
-Then run `npm start` and start making changes!
+Then run `npm run dev` and start making changes!
 
 ### Build and deployment
 

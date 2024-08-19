@@ -1,22 +1,16 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-import styled from 'styled-components';
-import '../styles/config.scss';
-import {
-  Container,
-  Row,
-  Col,
-} from 'reactstrap';
-import EmailSignUp from '../components/signup';
-import PointCard from '../components/pointCard';
-import BlackButton from '../components/blackButton';
+import styled from "styled-components";
+import "../styles/config.scss";
+import { Container, Row, Col } from "reactstrap";
+import EmailSignUp from "../components/signup";
+import PointCard from "../components/pointCard";
+import BlackButton from "../components/blackButton";
 
-import coverImage from '../assets/img/background/farmers-drawing.jpg';
-import sproutIcon from '../assets/img/icons/001-sprout.png';
-import worldIcon from '../assets/img/icons/007-world.png';
-import solarIcon from '../assets/img/icons/008-solar-energy.png';
-import farmerIcon from '../assets/img/icons/002-farmer.png';
-import peppersImage from '../assets/img/background/peppers.jpg';
+import coverImage from "../assets/img/background/farmers-drawing.jpg";
+import sproutIcon from "../assets/img/icons/001-sprout.png";
+import worldIcon from "../assets/img/icons/007-world.png";
+import solarIcon from "../assets/img/icons/008-solar-energy.png";
+import farmerIcon from "../assets/img/icons/002-farmer.png";
+import peppersImage from "../assets/img/background/peppers.jpg";
 
 const GraySection = styled.section`
   position: relative;
@@ -29,29 +23,25 @@ const GraySection = styled.section`
 
   @media (min-width: 768px) {
     padding: 4rem 0rem;
-
   }
   @media (min-width: 992px) {
     padding: 4rem 0rem;
-
   }
 `;
 
 const TransparentSection = styled.section`
   position: relative;
-    padding: 6rem 1rem;
-  
+  padding: 6rem 1rem;
+
   @media (min-width: 576px) {
     padding: 4rem 0rem;
   }
 
   @media (min-width: 768px) {
     padding: 4rem 0rem;
-
   }
   @media (min-width: 992px) {
     padding: 4rem 0rem;
-
   }
 `;
 
@@ -65,7 +55,7 @@ const CoverImage = styled.div`
   @media (min-width: 576px) {
     padding-top: 20rem;
   }
-  
+
   @media (min-width: 768px) {
     margin-top: -5rem;
     padding-bottom: 6rem;
@@ -76,7 +66,6 @@ const CoverImage = styled.div`
     background-repeat: no-repeat;
     background-size: 80%;
     padding-top: 10rem;
-
   }
 `;
 
@@ -90,7 +79,6 @@ const MasterHeadH1 = styled.h1`
   @media (min-width: 768px) {
     margin-top: 16rem;
     font-size: 4rem;
-
   }
   @media (min-width: 992px) {
     font-size: 3rem;
@@ -101,13 +89,12 @@ const MasterHeadH1 = styled.h1`
 const SectionH1 = styled.h1`
   margin-top: 4rem;
   margin-bottom: 1rem;
-  text-align: ${(props) => (props.left ? 'left' : 'center')};
+  text-align: ${(props) => (props.left ? "left" : "center")};
   font-size: 3rem;
 `;
 
 const SectionH2 = styled.h2`
-
-  text-align: ${(props) => (props.left ? 'left' : 'center')};
+  text-align: ${(props) => (props.left ? "left" : "center")};
 
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -119,10 +106,8 @@ const SectionH2 = styled.h2`
   }
 
   @media (min-width: 768px) {
-
   }
   @media (min-width: 992px) {
-
   }
 `;
 
@@ -152,9 +137,7 @@ export default function LandingPage() {
             <Row>
               <Col>
                 <MasterHeadH1>Invest in Your Meals</MasterHeadH1>
-                <SectionH2 left>
-                  We care about how our food is grown.
-                </SectionH2>
+                <SectionH2 left>We care about how our food is grown.</SectionH2>
                 <SectionH2 left>
                   We care about the communities that grow our food.
                 </SectionH2>
@@ -206,14 +189,18 @@ export default function LandingPage() {
                   arable land, yet spends US $35 billon importing food every
                   year.
                 </p>
-                <footer className="blockquote-footer">
+                <footer className="blockquote-footer mt-2">
                   Adesina Akinwumi, African Development Bank
                 </footer>
               </blockquote>
               <BlackButton text="Fund Farmers" />
             </Col>
             <Col md="4">
-              <img alt="fresh peppers" style={{ maxWidth: '100%', padding: '1rem', marginTop: '1rem' }} src={peppersImage} />
+              <img
+                alt="fresh peppers"
+                style={{ maxWidth: "100%", padding: "1rem", marginTop: "1rem" }}
+                src={peppersImage}
+              />
             </Col>
           </Row>
         </Container>

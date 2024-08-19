@@ -1,45 +1,42 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable react/prop-types */
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import '../styles/config.scss';
-import '../styles/timeline.css';
+import "../styles/config.scss";
+import "../styles/timeline.css";
 
-import {
-  Container, Row, Col, Button,
-} from 'reactstrap';
-import Timeline from '../components/timeline';
-import LineGraph from '../components/lineGraph';
-import PieChart from '../components/pieChart';
-import FarmerDetailsTable from '../components/farmerDetailsTable';
-import Title from '../components/title';
+import { Container, Row, Col, Button } from "reactstrap";
+import Timeline from "../components/timeline";
+import LineGraph from "../components/lineGraph";
+import PieChart from "../components/pieChart";
+import FarmerDetailsTable from "../components/farmerDetailsTable";
+import Title from "../components/title";
 
 const StyledRow = styled(Row)`
   margin: 5rem 0rem;
 `;
 
 const ClickToInvestCard = () => (
-  <Row style={{ marginBottom: '5rem' }}>
+  <Row style={{ marginBottom: "5rem" }}>
     <Col
       md={{ size: 10, offset: 1 }}
       style={{
-        textAlign: 'left',
-        backgroundColor: '#e9ecef',
-        margin: 'auto',
-        padding: '2rem',
-        borderRadius: '1rem',
-      }}>
-      <h2 style={{ fontWeight: 'bold' }}>Click to Invest!</h2>
+        textAlign: "left",
+        backgroundColor: "#e9ecef",
+        margin: "auto",
+        padding: "2rem",
+        borderRadius: "1rem",
+      }}
+    >
+      <h2 style={{ fontWeight: "bold" }}>Click to Invest!</h2>
       <p>Click here for further technical details</p>
       <Button
         outline
         style={{
-          padding: '0.5rem 3rem',
-          fontSize: '1.5rem',
-          letterSpacing: '1px',
-          marginTop: '1rem',
-        }}>
+          padding: "0.5rem 3rem",
+          fontSize: "1.5rem",
+          letterSpacing: "1px",
+          marginTop: "1rem",
+        }}
+      >
         Invest
       </Button>
     </Col>
@@ -47,24 +44,25 @@ const ClickToInvestCard = () => (
 );
 
 const FarmerProfile = (farmerParent) => (
-  <Container style={{ paddingTop: '5rem' }}>
+  <Container style={{ paddingTop: "5rem" }}>
     <StyledRow>
       <Col md={{ size: 2, offset: 1 }}>
         <img
           src={farmerParent.farmer.imgLink}
           alt="Farmer Profile"
-          style={{ maxWidth: '100%' }} />
+          style={{ maxWidth: "100%" }}
+        />
       </Col>
       <Col md="auto">
-        <Title style={{ padding: '0rem' }}>
+        <Title style={{ padding: "0rem" }}>
           {farmerParent.farmer.farmerName + "'s Farm"}
         </Title>
-        <h4 style={{ fontColor: '#666' }}>
-          {'in '
-            + farmerParent.farmer.location.city
-            + ' ('
-            + farmerParent.farmer.location.coordinates
-            + ' )'}
+        <h4 style={{ fontColor: "#666" }}>
+          {"in " +
+            farmerParent.farmer.location.city +
+            " (" +
+            farmerParent.farmer.location.coordinates +
+            " )"}
         </h4>
       </Col>
     </StyledRow>
@@ -74,24 +72,25 @@ const FarmerProfile = (farmerParent) => (
           src={farmerParent.farmer.imgLink2}
           alt="iPollen8"
           style={{
-            maxWidth: '90%',
-            margin: 'auto',
-            display: 'block',
-          }} />
+            maxWidth: "90%",
+            margin: "auto",
+            display: "block",
+          }}
+        />
       </Col>
       <Col md="6">
-        <h4 style={{ color: '#495057' }}>
-          {'Crop Type: ' + farmerParent.farmer.farmingStage}
+        <h4 style={{ color: "#495057" }}>
+          {"Crop Type: " + farmerParent.farmer.farmingStage}
         </h4>
-        <h4 style={{ color: '#868e96' }}>
-          {'Current Stage: ' + farmerParent.farmer.cropType}
+        <h4 style={{ color: "#868e96" }}>
+          {"Current Stage: " + farmerParent.farmer.cropType}
         </h4>
-        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
+        <div style={{ marginTop: "3rem", textAlign: "center" }}>
           <h2>{farmerParent.farmer.details.section1.title}</h2>
-          <h2 style={{ fontSize: '4rem', color: 'green' }}>
+          <h2 style={{ fontSize: "4rem", color: "green" }}>
             {farmerParent.farmer.details.section1.percent}
           </h2>
-          <p style={{ color: '#868e96' }}>
+          <p style={{ color: "#868e96" }}>
             {farmerParent.farmer.details.section1.desc}
           </p>
         </div>
@@ -108,26 +107,28 @@ const FarmerProfile = (farmerParent) => (
           src={farmerParent.farmer.imgLink3}
           alt="iPollen8"
           style={{
-            maxWidth: '90%',
-            margin: 'auto',
-            display: 'block',
-          }} />
+            maxWidth: "90%",
+            margin: "auto",
+            display: "block",
+          }}
+        />
       </Col>
       <Col md="6">
         <h2
           style={{
-            fontStyle: 'italic',
-            fontSize: '2.5rem',
-            color: '#e16565',
-            paddingBottom: '1rem',
-          }}>
+            fontStyle: "italic",
+            fontSize: "2.5rem",
+            color: "#e16565",
+            paddingBottom: "1rem",
+          }}
+        >
           {farmerParent.farmer.details.section2.bigTitle}
         </h2>
         <div>
           {farmerParent.farmer.details.section2.desc.map((item, index) => (
             <p key={index}>
               <strong>{item.key}</strong>
-              {': ' + item.value}
+              {": " + item.value}
             </p>
           ))}
         </div>
@@ -135,8 +136,8 @@ const FarmerProfile = (farmerParent) => (
         <div>
           {farmerParent.farmer.details.section2.fundingNeeds.map(
             (item, index) => (
-              <p key={index}>{item.key + ': ' + item.value}</p>
-            ),
+              <p key={index}>{item.key + ": " + item.value}</p>
+            )
           )}
         </div>
         <p>Farm Location</p>
@@ -151,15 +152,16 @@ const FarmerProfile = (farmerParent) => (
     </StyledRow>
     <ClickToInvestCard />
     <StyledRow>
-      <Col md="6" style={{ padding: '2rem' }}>
-        <h2 style={{ marginBottom: '2rem' }}>Soil Geology</h2>
+      <Col md="6" style={{ padding: "2rem" }}>
+        <h2 style={{ marginBottom: "2rem" }}>Soil Geology</h2>
         <PieChart />
       </Col>
       <Col md="6">
         <FarmerDetailsTable
           farmerName={farmerParent.farmer.farmerName}
           coord={farmerParent.farmer.location.coordinates}
-          details={farmerParent.farmer.details} />
+          details={farmerParent.farmer.details}
+        />
         <h4>Summary</h4>
         <p>{farmerParent.farmer.details.summary}</p>
       </Col>
@@ -168,7 +170,7 @@ const FarmerProfile = (farmerParent) => (
       <Col md="auto">
         <h2>Precipitation</h2>
         <StyledRow>
-          <Col md={{ size: '6', offset: '3' }}>
+          <Col md={{ size: "6", offset: "3" }}>
             <LineGraph />
           </Col>
         </StyledRow>

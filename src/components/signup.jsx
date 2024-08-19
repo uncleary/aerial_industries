@@ -1,14 +1,6 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-return-assign */
-/* eslint-disable react/no-danger */
-/* eslint-disable react/prop-types */
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import {
-  Container, Row, Col,
-} from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
 const StyledSelect = styled.select`
   height: 2.5rem;
@@ -27,16 +19,15 @@ const StyledAsterisk = styled.span`
   top: 5px;
 `;
 
-const RequiredSign = () => (
-  <StyledAsterisk> * </StyledAsterisk>
-);
+const RequiredSign = () => <StyledAsterisk> * </StyledAsterisk>;
 
 const MailChimpHtmlForm = () => (
   <div>
     <link
       href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
       rel="stylesheet"
-      type="text/css" />
+      type="text/css"
+    />
     <div id="mc_embed_signup">
       <form
         action="https://industries.us5.list-manage.com/subscribe/post?u=5a26c7df6ddc588d16a7dbce0&id=09d0909236"
@@ -45,11 +36,12 @@ const MailChimpHtmlForm = () => (
         name="mc-embedded-subscribe-form"
         className="validate"
         target="_blank"
-        noValidate>
+        noValidate
+      >
         <div id="mc_embed_signup_scroll">
           <div className="indicates-required">
             <RequiredSign />
-              indicates required
+            indicates required
           </div>
           <div className="mc-field-group">
             <label htmlFor="mce-EMAIL">
@@ -60,7 +52,8 @@ const MailChimpHtmlForm = () => (
               type="email"
               name="EMAIL"
               className="required email"
-              id="mce-EMAIL" />
+              id="mce-EMAIL"
+            />
           </div>
           <div className="mc-field-group">
             <Row>
@@ -69,26 +62,16 @@ const MailChimpHtmlForm = () => (
                   First Name
                   <RequiredSign />
                 </label>
-                <input
-                  type="text"
-                  name="FNAME"
-                  className
-                  id="mce-FNAME" />
+                <input type="text" name="FNAME" className id="mce-FNAME" />
               </Col>
               <Col>
                 <label htmlFor="mce-LNAME">
                   Last Name
                   <RequiredSign />
                 </label>
-                <input
-                  type="text"
-                  name="LNAME"
-                  className
-                  id="mce-LNAME" />
+                <input type="text" name="LNAME" className id="mce-LNAME" />
               </Col>
             </Row>
-
-
           </div>
           {/* <div className="mc-field-group size1of2">
             <label htmlFor="mce-PHONE">Phone Number </label>
@@ -100,15 +83,14 @@ const MailChimpHtmlForm = () => (
           </div> */}
           <div className="mc-address-group">
             <div className="mc-field-group">
-              <label htmlFor="mce-ADDRESS-addr1">
-                Address
-              </label>
+              <label htmlFor="mce-ADDRESS-addr1">Address</label>
               <input
                 type="text"
                 maxLength={70}
                 name="ADDRESS[addr1]"
                 id="mce-ADDRESS-addr1"
-                className />
+                className
+              />
             </div>
             {/* <div className="mc-field-group">
               <label htmlFor="mce-ADDRESS-addr2">Address Line 2</label>
@@ -125,7 +107,8 @@ const MailChimpHtmlForm = () => (
                 maxLength={40}
                 name="ADDRESS[city]"
                 id="mce-ADDRESS-city"
-                className />
+                className
+              />
             </div>
             <div className="mc-field-group size1of2">
               <label htmlFor="mce-ADDRESS-state">State/Province/Region</label>
@@ -134,7 +117,8 @@ const MailChimpHtmlForm = () => (
                 maxLength={20}
                 name="ADDRESS[state]"
                 id="mce-ADDRESS-state"
-                className />
+                className
+              />
             </div>
             <div className="mc-field-group size1of2">
               <label htmlFor="mce-ADDRESS-zip">Postal / Zip Code</label>
@@ -143,7 +127,8 @@ const MailChimpHtmlForm = () => (
                 maxLength={10}
                 name="ADDRESS[zip]"
                 id="mce-ADDRESS-zip"
-                className />
+                className
+              />
             </div>
             <div className="mc-field-group size1of2">
               <label htmlFor="mce-ADDRESS-country">Country</label>
@@ -261,7 +246,9 @@ const MailChimpHtmlForm = () => (
                 <option value={203}>Kiribati</option>
                 <option value={82}>Kuwait</option>
                 <option value={83}>Kyrgyzstan</option>
-                <option value={84}>Lao People`&apos;`s Democratic Republic</option>
+                <option value={84}>
+                  Lao People`&apos;`s Democratic Republic
+                </option>
                 <option value={85}>Latvia</option>
                 <option value={86}>Lebanon</option>
                 <option value={87}>Lesotho</option>
@@ -389,16 +376,19 @@ const MailChimpHtmlForm = () => (
               </StyledSelect>
             </div>
           </div>
-          
           <div className="mc-field-group">
             <label htmlFor="mce-REFERRAL">
-              How did you learn about Aerial Industries?
-              {' '}
-              <RequiredSign />
+              How did you learn about Aerial Industries? <RequiredSign />
             </label>
-            <StyledSelect name="REFERRAL" className="required" id="mce-REFERRAL">
+            <StyledSelect
+              name="REFERRAL"
+              className="required"
+              id="mce-REFERRAL"
+            >
               <option value />
-              <option value="Personal introduction">Personal introduction</option>
+              <option value="Personal introduction">
+                Personal introduction
+              </option>
               <option value="Conference or event">Conference or event</option>
               <option value="News or media">News or media</option>
               <option value="Online">Online</option>
@@ -408,20 +398,23 @@ const MailChimpHtmlForm = () => (
             <div
               className="response"
               id="mce-error-response"
-              style={{ display: 'none' }} />
+              style={{ display: "none" }}
+            />
             <div
               className="response"
               id="mce-success-response"
-              style={{ display: 'none' }} />
-          </div>
-          {' '}
+              style={{ display: "none" }}
+            />
+          </div>{" "}
           <div
-            style={{ position: 'absolute', left: '-5000px' }}
-            aria-hidden="true">
+            style={{ position: "absolute", left: "-5000px" }}
+            aria-hidden="true"
+          >
             <input
               type="text"
               name="b_5a26c7df6ddc588d16a7dbce0_09d0909236"
-              tabIndex={-1} />
+              tabIndex={-1}
+            />
           </div>
           <div className="clear text-center">
             <input
@@ -431,14 +424,15 @@ const MailChimpHtmlForm = () => (
               id="mc-embedded-subscribe"
               className="button"
               style={{
-                borderRadius: '0.3rem',
-                backgroundColor: 'rgb(51, 51, 51)',
-                borderColor: 'rgb(51, 51, 51)',
-                marginTop: '1.5rem',
-                padding: '0rem 2rem',
-                height: '3rem',
-                fontSize: '1.25rem',
-              }} />
+                borderRadius: "0.3rem",
+                backgroundColor: "rgb(51, 51, 51)",
+                borderColor: "rgb(51, 51, 51)",
+                marginTop: "1.5rem",
+                padding: "0rem 2rem",
+                height: "3rem",
+                fontSize: "1.25rem",
+              }}
+            />
           </div>
         </div>
       </form>
@@ -466,7 +460,7 @@ const TransparentSection = styled.section`
 const SectionH2 = styled.h2`
   margin-top: 1rem;
   margin-bottom: 2rem;
-  text-align: ${(props) => (props.left ? 'left' : 'center')};
+  text-align: ${(props) => (props.left ? "left" : "center")};
   font-size: 1.4rem;
   line-height: 1.5;
   color: #666;
@@ -476,7 +470,7 @@ const EmailSignUp = () => (
   <TransparentSection>
     <Container>
       <Row id="SignUp">
-        <Col md="8" offset="2" style={{ margin: 'auto' }}>
+        <Col md="8" offset="2" style={{ margin: "auto" }}>
           <SectionH2>Get in touch with iPollen8</SectionH2>
           <MailChimpHtmlForm />
         </Col>

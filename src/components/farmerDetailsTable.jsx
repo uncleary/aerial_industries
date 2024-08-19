@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Table } from 'reactstrap';
+import { Table } from "reactstrap";
 
 const FarmerDetailsTable = ({ farmerName, coord, details }) => (
   <Table hover>
@@ -13,7 +12,7 @@ const FarmerDetailsTable = ({ farmerName, coord, details }) => (
     <tbody>
       <tr>
         <th scope="row">Farm ID</th>
-        <td>{'ae0024-26-' + details.id}</td>
+        <td>{"ae0024-26-" + details.id}</td>
       </tr>
       <tr>
         <th scope="row">Farmer</th>

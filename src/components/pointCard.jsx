@@ -1,13 +1,7 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import {
-  Card,
-  CardTitle,
-  CardBody,
-  CardImg,
-} from 'reactstrap';
+import { Card, CardTitle, CardBody, CardImg } from "reactstrap";
 
 const StyledCard = styled(Card)`
   margin: 2rem;
@@ -17,10 +11,8 @@ const StyledCard = styled(Card)`
   }
 
   @media (min-width: 768px) {
-
   }
   @media (min-width: 992px) {
-
   }
 `;
 
@@ -32,19 +24,24 @@ const PointCard = ({ subtitle, icon }) => (
       src={icon}
       alt="Card image cap"
       style={{
-        padding: '2rem', margin: 'auto', maxWidth: '80%', filter: 'grayscale(100%)',
-      }} />
+        padding: "2rem",
+        margin: "auto",
+        maxWidth: "80%",
+        filter: "grayscale(100%)",
+      }}
+    />
     <CardBody>
       <CardTitle
         style={{
-          textAlign: 'left',
-          width: '90%',
-          margin: 'auto',
-          paddingBottom: '2rem',
-        }}>
+          textAlign: "left",
+          width: "90%",
+          margin: "auto",
+          paddingBottom: "2rem",
+        }}
+      >
         <p>{subtitle}</p>
       </CardTitle>
-      <p style={{ fontWeight: 'bold' }}>{'See More >'}</p>
+      <p style={{ fontWeight: "bold" }}>{"See More >"}</p>
     </CardBody>
   </StyledCard>
 );

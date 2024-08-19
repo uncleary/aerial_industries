@@ -1,10 +1,5 @@
-import React from 'react';
-import {
-  Container,
-  Row,
-  Col,
-} from 'reactstrap';
-import styled from 'styled-components';
+import { Container, Row, Col } from "reactstrap";
+import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   padding: 2rem;

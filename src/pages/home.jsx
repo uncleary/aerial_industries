@@ -1,15 +1,12 @@
 /* eslint-disable react/jsx-key */
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import '../styles/config.scss';
-import { Link } from 'react-router-dom';
-import {
-  Container, Row, Col, Card, CardTitle, Button,
-} from 'reactstrap';
-import Title from '../components/title';
-import supporterLogosArray from '../assets/img/supporter-logo';
-import mediaLogosArray from '../assets/img/media-logo';
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import "../styles/config.scss";
+import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, CardTitle, Button } from "reactstrap";
+import Title from "../components/title";
+import supporterLogosArray from "../assets/img/supporter-logo";
+import mediaLogosArray from "../assets/img/media-logo";
 
 const MasterHead = styled.section`
   position: relative;
@@ -29,7 +26,6 @@ const Subtitle = styled.h2`
   }
   @media (min-width: 992px) {
     font-size: 1.5rem;
-
   }
 `;
 
@@ -40,16 +36,16 @@ const InvestButton = styled(Button)`
 `;
 
 const StyledCard = styled(Card)`
-  color: 'black';
+  color: "black";
   box-shadow: 5px 5px 10px #777;
   margin-bottom: 1.5rem;
   background-color: #75c581;
   border-color: transparent;
-  transition: transform .2s;
+  transition: transform 0.2s;
 
   &:hover {
     background-color: #a5baa6;
-    transform: translateY(.3rem);
+    transform: translateY(0.3rem);
   }
   &.active {
     background-color: #a5baa6;
@@ -83,11 +79,9 @@ const SloganBig = styled.h2`
 
   @media (min-width: 768px) {
     font-size: 1.7rem;
-
   }
   @media (min-width: 992px) {
     font-size: 2.5rem;
-
   }
 `;
 
@@ -104,7 +98,6 @@ const SloganSmall = styled.h3`
   }
   @media (min-width: 992px) {
     font-size: 1.7rem;
-
   }
 `;
 
@@ -113,18 +106,17 @@ const StyledCardTitle = styled(CardTitle)`
   width: 90%;
   margin: auto;
   ${StyledCard}:hover & {
-    display: ${(props) => (props.hideonhover ? 'none' : 'block')};
+    display: ${(props) => (props.hideonhover ? "none" : "block")};
   }
   @media (min-width: 992px) {
     padding-top: 2rem;
-
   }
 `;
 
 const HoverCard = styled.div`
   display: none;
   ${StyledCard}:hover & {
-    display: ${(props) => (props.hideonhover ? 'block' : 'none')};
+    display: ${(props) => (props.hideonhover ? "block" : "none")};
   }
 `;
 
@@ -140,23 +132,20 @@ const LogoImage = styled.img`
   }
 `;
 
-const CoCard = ({
-  sloganBig, sloganSmall, companyName, linkTo, info,
-}) => (
+const CoCard = ({ sloganBig, sloganSmall, companyName, linkTo, info }) => (
   <StyledCard body>
-    <Link to={linkTo || ''}>
+    <Link to={linkTo || ""}>
       <div
         style={{
-          minHeight: '250px',
-          justifyContent: 'center',
-          alignItems: 'center',
-          display: 'flex',
-        }}>
+          minHeight: "250px",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+        }}
+      >
         <HoverCard hideonhover={info || undefined}>
-          <h3 style={{ textAlign: 'left', color: 'white' }}>
-            {companyName}
-          </h3>
-          <p style={{ color: 'white' }}>{info}</p>
+          <h3 style={{ textAlign: "left", color: "white" }}>{companyName}</h3>
+          <p style={{ color: "white" }}>{info}</p>
           <Link to="/signup">
             <InvestButton>Invest</InvestButton>
           </Link>
@@ -166,11 +155,12 @@ const CoCard = ({
           <SloganSmall>{sloganSmall}</SloganSmall>
           <h4
             style={{
-              textAlign: 'right',
-              paddingTop: '3rem',
-              marginBottom: '-3rem',
-              color: 'white',
-            }}>
+              textAlign: "right",
+              paddingTop: "3rem",
+              marginBottom: "-3rem",
+              color: "white",
+            }}
+          >
             {companyName}
           </h4>
         </StyledCardTitle>
@@ -189,24 +179,22 @@ CoCard.propTypes = {
 
 export default function Home() {
   const co1 = {
-    sloganBig: 'Micro',
-    sloganSmall: 'Nutrients',
-    companyName: 'iPollen8',
-    linkTo: '/ipollen8',
+    sloganBig: "Micro",
+    sloganSmall: "Nutrients",
+    companyName: "iPollen8",
+    linkTo: "/ipollen8",
   };
   const co2 = {
-    sloganBig: 'Precision',
-    sloganSmall: 'Mechanization',
-    companyName: 'cygnus',
-    info:
-      'An industrial agriculture aerial robotic system designed to revolutionize nature-based crop dusting',
+    sloganBig: "Precision",
+    sloganSmall: "Mechanization",
+    companyName: "cygnus",
+    info: "An industrial agriculture aerial robotic system designed to revolutionize nature-based crop dusting",
   };
   const co3 = {
-    sloganBig: 'Energy',
-    sloganSmall: 'Resource',
-    companyName: 'H.A.W.K.',
-    info:
-      'High Altitude Wind Kite provides clean electricity to power all your farm equipments remotely',
+    sloganBig: "Energy",
+    sloganSmall: "Resource",
+    companyName: "H.A.W.K.",
+    info: "High Altitude Wind Kite provides clean electricity to power all your farm equipments remotely",
   };
 
   return (
@@ -227,35 +215,41 @@ export default function Home() {
               sloganBig={co1.sloganBig}
               sloganSmall={co1.sloganSmall}
               companyName={co1.companyName}
-              linkTo={co1.linkTo} />
+              linkTo={co1.linkTo}
+            />
           </Col>
           <Col md="4" className="mb-5">
             <CoCard
               sloganBig={co2.sloganBig}
               sloganSmall={co2.sloganSmall}
               companyName={co2.companyName}
-              info={co2.info} />
+              info={co2.info}
+            />
           </Col>
           <Col md="4" className="mb-5">
             <CoCard
               sloganBig={co3.sloganBig}
               sloganSmall={co3.sloganSmall}
               companyName={co3.companyName}
-              info={co3.info} />
+              info={co3.info}
+            />
           </Col>
         </Row>
       </Container>
       <Container>
-        <Row style={{ marginTop: '5rem' }}>
+        <Row style={{ marginTop: "5rem" }}>
           <Col md={{ size: 10, offset: 1 }}>
             <h4>Supported By</h4>
           </Col>
         </Row>
         <Row>
-          <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
+          <Col style={{ textAlign: "center", marginTop: "-1rem" }}>
             {supporterLogosArray.map((logo) => (
               <a href={logo.link} target="_blank" rel="noopener noreferrer">
-                <LogoImage numElements={supporterLogosArray.length} src={logo.image} />
+                <LogoImage
+                  numElements={supporterLogosArray.length}
+                  src={logo.image}
+                />
               </a>
             ))}
           </Col>
@@ -266,10 +260,13 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col style={{ textAlign: 'center', marginTop: '-1rem' }}>
+          <Col style={{ textAlign: "center", marginTop: "-1rem" }}>
             {mediaLogosArray.map((logo) => (
               <a href={logo.link} target="_blank" rel="noopener noreferrer">
-                <LogoImage numElements={mediaLogosArray.length} src={logo.image} />
+                <LogoImage
+                  numElements={mediaLogosArray.length}
+                  src={logo.image}
+                />
               </a>
             ))}
           </Col>

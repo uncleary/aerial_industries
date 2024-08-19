@@ -1,13 +1,11 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
+import React from "react";
 import {
   VictoryChart,
   VictoryZoomContainer,
   VictoryLine,
   VictoryBrushContainer,
   VictoryAxis,
-} from 'victory';
+} from "victory";
 
 export default class LineGraph extends React.Component {
   constructor() {
@@ -29,17 +27,19 @@ export default class LineGraph extends React.Component {
         <VictoryChart
           width={600}
           height={350}
-          scale={{ x: 'time' }}
-          containerComponent={(
+          scale={{ x: "time" }}
+          containerComponent={
             <VictoryZoomContainer
               responsive={false}
               zoomDimension="x"
               zoomDomain={this.state.zoomDomain}
-              onZoomDomainChange={this.handleZoom.bind(this)} />
-          )}>
+              onZoomDomainChange={this.handleZoom.bind(this)}
+            />
+          }
+        >
           <VictoryLine
             style={{
-              data: { stroke: 'tomato' },
+              data: { stroke: "tomato" },
             }}
             data={[
               { x: new Date(1982, 1, 1), y: 125 },
@@ -50,7 +50,8 @@ export default class LineGraph extends React.Component {
               { x: new Date(2005, 1, 1), y: 305 },
               { x: new Date(2011, 1, 1), y: 270 },
               { x: new Date(2015, 1, 1), y: 470 },
-            ]} />
+            ]}
+          />
         </VictoryChart>
 
         <VictoryChart
@@ -62,14 +63,16 @@ export default class LineGraph extends React.Component {
           }}
           width={600}
           height={90}
-          scale={{ x: 'time' }}
-          containerComponent={(
+          scale={{ x: "time" }}
+          containerComponent={
             <VictoryBrushContainer
               responsive={false}
               brushDimension="x"
               brushDomain={this.state.selectedDomain}
-              onBrushDomainChange={this.handleBrush.bind(this)} />
-          )}>
+              onBrushDomainChange={this.handleBrush.bind(this)}
+            />
+          }
+        >
           <VictoryAxis
             tickValues={[
               new Date(1985, 1, 1),
@@ -79,10 +82,11 @@ export default class LineGraph extends React.Component {
               new Date(2005, 1, 1),
               new Date(2010, 1, 1),
             ]}
-            tickFormat={(x) => new Date(x).getFullYear()} />
+            tickFormat={(x) => new Date(x).getFullYear()}
+          />
           <VictoryLine
             style={{
-              data: { stroke: 'tomato' },
+              data: { stroke: "tomato" },
             }}
             data={[
               { x: new Date(1982, 1, 1), y: 125 },
@@ -93,7 +97,8 @@ export default class LineGraph extends React.Component {
               { x: new Date(2005, 1, 1), y: 305 },
               { x: new Date(2011, 1, 1), y: 270 },
               { x: new Date(2015, 1, 1), y: 470 },
-            ]} />
+            ]}
+          />
         </VictoryChart>
       </div>
     );
