@@ -11,7 +11,7 @@ import mediaLogosArray from "../assets/img/media-logo";
 const MasterHead = styled.section`
   position: relative;
   background-color: white;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 `;
 
 const Subtitle = styled.h2`
